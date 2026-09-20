@@ -42,3 +42,5 @@ table.kunci td, table.kunci th { border:1px solid #cfe0d9; padding:6px 8px; text
 table.kunci th { background:var(--gl); color:var(--gd); }
 .note { font-size:13px; color:#6b7280; line-height:1.6; }
 footer { text-align:center; color:#6b7280; font-size:13px; margin-top:30px; }
+a.fig { display:block; margin:4px 0 12px; }
+a.fig img { max-width:100%; max-height:320px; border:1px solid #e2e8e5; border-radius:6px; background:#fff; padding:6px; }

@@ -19,8 +19,8 @@
     Soal olimpiade di bawah diambil dari naskah babak penyisihan Chaanakya Ekadanta Olympiad
     tingkat nasional tahun 2024 dan 2025. Tiap paket berisi 25 soal. Kerjakan dulu, lalu tekan
     tombol periksa untuk melihat nilai dan kunci jawabannya.
-    Beberapa soal pada naskah asli memakai gambar. Soal itu tetap ditampilkan, diberi tanda
-    <span class="badge img">gambar</span>, dan tidak ikut dinilai karena gambarnya tidak tersedia.
+    Soal bergambar ditampilkan lengkap dengan gambarnya, diambil langsung dari naskah asli.
+    Klik gambar untuk melihat ukuran penuh.
   </div>
 
   <div class="section">Matematika</div>
@@ -54,12 +54,12 @@
   }).forEach(function (p) {
     var box = document.getElementById('g-' + p.mapel);
     if (!box) return;
-    var nilai = p.soal.filter(function (s) { return s[2] !== null; }).length;
+    var gbr = p.soal.filter(function (s) { return s[3]; }).length;
     var a = document.createElement('a');
     a.className = 'paket';
     a.href = 'latihan.html?paket=' + p.id;
     a.innerHTML = '<b>' + p.label + ' – ' + p.tipe + '</b>' +
-      '<span>Tahun ' + p.tahun + ' · ' + p.soal.length + ' soal · ' + nilai + ' soal dinilai</span>';
+      '<span>Tahun ' + p.tahun + ' · ' + p.soal.length + ' soal · ' + gbr + ' bergambar</span>';
     box.appendChild(a);
   });
 })();

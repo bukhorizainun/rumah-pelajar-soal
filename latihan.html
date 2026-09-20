@@ -37,7 +37,7 @@
   <div class="card" id="kunci" style="display:none">
     <b style="color:var(--g)">Kunci Jawaban</b>
     <div style="overflow-x:auto;margin-top:8px"><table class="kunci" id="tblKunci"></table></div>
-    <p class="note">Tanda &ndash; berarti soal memakai gambar pada naskah asli, sehingga kunci tidak dicantumkan.</p>
+    <p class="note">Tanda &ndash; berarti kunci soal itu tidak bisa dipastikan dari naskah asli.</p>
   </div>
 
   <footer>Selamat belajar! Semoga sukses selalu menyertai perjalanan belajarmu. — Rumah Pelajar</footer>
@@ -67,9 +67,13 @@
       return '<label data-opt="' + j + '"><input type="radio" name="q' + i + '" value="' + j + '"><span>' +
         HURUF[j] + '. ' + o + '</span></label>';
     }).join('');
+    var gambar = s[3]
+      ? '<a class="fig" href="' + s[3] + '" target="_blank" rel="noopener">' +
+        '<img src="' + s[3] + '" alt="Gambar soal ' + (i + 1) + '" loading="lazy"></a>'
+      : '';
     card.innerHTML =
-      '<div class="lvl">Soal ' + (i + 1) + (punyaKunci ? '' : ' <span class="badge img">gambar</span>') + '</div>' +
-      '<div class="q">' + s[0] + '</div>' +
+      '<div class="lvl">Soal ' + (i + 1) + (punyaKunci ? '' : ' <span class="badge img">kunci tidak tersedia</span>') + '</div>' +
+      '<div class="q">' + s[0] + '</div>' + gambar +
       '<div class="opts">' + opts + '</div>' +
       '<div class="sol"></div>';
     quiz.appendChild(card);
@@ -84,7 +88,7 @@
       var sol = card.querySelector('.sol');
       card.classList.add('done');
       if (kunci === null) {
-        sol.innerHTML = 'Soal ini memakai gambar pada naskah asli, jadi kunci jawabannya tidak dicantumkan.';
+        sol.innerHTML = 'Kunci soal ini tidak dicantumkan karena jawabannya tidak bisa dipastikan dari naskah asli.';
         return;
       }
       total++;
