@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rumah Pelajar – Latihan Eksponen & Logaritma</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<style>
+  :root { --g:#1f6f5c; --gd:#174f42; --gl:#eef6f3; --o:#c2410c; --ok:#15803d; --bad:#b91c1c; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#f4f6f5; color:#1f2937; }
+  header { background:var(--g); color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; }
+  header b { letter-spacing:.5px; }
+  header span { font-size:13px; opacity:.9; }
+  main { max-width:820px; margin:0 auto; padding:24px 16px 60px; }
+  .title { text-align:center; margin-bottom:20px; }
+  .title small { color:var(--g); font-weight:bold; }
+  .title h1 { margin:6px 0; color:var(--gd); font-size:30px; }
+  .title p { margin:4px 0; color:#4b5563; }
+  .card { background:#fff; border:1px solid #d9e3df; border-radius:10px; padding:16px 18px; margin-bottom:14px; }
+  .ident { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .ident input { flex:1; min-width:180px; padding:9px 10px; border:1px solid #b9cbc4; border-radius:6px; font-size:15px; }
+  .section { background:var(--g); color:#fff; padding:10px 14px; border-radius:6px; font-weight:bold; margin:26px 0 12px; }
+  .lvl { font-size:13px; color:var(--g); font-style:italic; }
+  .q { font-weight:bold; margin:6px 0 10px; line-height:1.6; }
+  .opts label { display:flex; gap:10px; align-items:center; padding:8px 10px; border:1px solid #e2e8e5; border-radius:6px; margin-bottom:6px; cursor:pointer; }
+  .opts label:hover { background:var(--gl); }
+  .opts input { accent-color:var(--g); }
+  .opts label.correct { border-color:var(--ok); background:#dcfce7; }
+  .opts label.wrong { border-color:var(--bad); background:#fee2e2; }
+  .badge { display:inline-block; font-size:12px; font-weight:bold; padding:2px 8px; border-radius:10px; margin-left:6px; }
+  .badge.ok { background:#dcfce7; color:var(--ok); }
+  .badge.no { background:#fee2e2; color:var(--bad); }
+  .sol { display:none; margin-top:10px; background:var(--gl); border-left:4px solid var(--g); padding:10px 14px; border-radius:4px; }
+  .sol ol { margin:6px 0; padding-left:20px; line-height:1.7; }
+  .sol .ans { color:var(--o); font-weight:bold; }
+  .done .sol { display:block; }
+  .btns { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:20px; }
+  button { background:var(--g); color:#fff; border:0; padding:12px 22px; border-radius:6px; font-size:15px; font-weight:bold; cursor:pointer; }
+  button.sec { background:#fff; color:var(--g); border:2px solid var(--g); }
+  #result { display:none; text-align:center; }
+  #result .score { font-size:42px; font-weight:bold; color:var(--gd); }
+  .summary { overflow-x:auto; }
+  table.rumus { width:100%; border-collapse:collapse; }
+  table.rumus td { border:1px solid #cfe0d9; padding:6px 10px; background:#f7fbf9; }
+  footer { text-align:center; color:#6b7280; font-size:13px; margin-top:30px; }
+</style>
+</head>
+<body>
+<header><b>RUMAH PELAJAR</b><a href="index.html">&larr; Daftar soal</a><span>Latihan Matematika – Eksponen &amp; Logaritma</span></header>
+<main>
+  <div class="title">
+    <small>RUMAH PELAJAR</small>
+    <h1>EKSPONEN &amp; LOGARITMA</h1>
+    <p>20 Soal Latihan Pilihan Ganda + Pembahasan</p>
+    <p>Kelas 10 SMA – Kurikulum Merdeka</p>
+  </div>
+
+  <div class="card summary">
+    <b style="color:var(--g)">Ringkasan Sifat</b>
+    <table class="rumus" style="margin-top:8px">
+      <tr><td>\(a^m\cdot a^n=a^{m+n}\), \(\;a^m:a^n=a^{m-n}\), \(\;(a^m)^n=a^{mn}\), \(\;a^{-n}=\frac1{a^n}\), \(\;\sqrt[n]{a^m}=a^{m/n}\)</td></tr>
+      <tr><td>\(a^{f(x)}=a^{g(x)} \Rightarrow f(x)=g(x)\)</td></tr>
+      <tr><td>\({}^a\!\log b=c \Leftrightarrow a^c=b\) \((a>0,\ a\ne1,\ b>0)\)</td></tr>
+      <tr><td>\({}^a\!\log bc={}^a\!\log b+{}^a\!\log c\), \(\;{}^a\!\log \frac bc={}^a\!\log b-{}^a\!\log c\), \(\;{}^a\!\log b^n=n\,{}^a\!\log b\)</td></tr>
+      <tr><td>\({}^{a^m}\!\log b^n=\frac nm\,{}^a\!\log b\), \(\;{}^a\!\log b\cdot{}^b\!\log c={}^a\!\log c\), \(\;a^{{}^a\log b}=b\)</td></tr>
+    </table>
+  </div>
+
+  <div class="card ident">
+    <label for="nama"><b>Nama:</b></label>
+    <input id="nama" placeholder="Tulis namamu di sini">
+  </div>
+
+  <div id="quiz"></div>
+
+  <div class="card" id="result">
+    <div id="resName"></div>
+    <div class="score" id="resScore"></div>
+    <div id="resText"></div>
+  </div>
+
+  <div class="btns">
+    <button id="submit">Selesai &amp; Periksa Jawaban</button>
+    <button id="reset" class="sec">Ulangi</button>
+  </div>
+
+  <footer>Selamat belajar! Semoga sukses selalu menyertai perjalanan belajarmu. — Rumah Pelajar</footer>
+</main>
+
+<script>
+const L = (b, x) => String.raw`{}^{${b}}\!\log ${x}`;
+
+const SOAL = [
+  // ---------- EKSPONEN ----------
+  { lvl:"Eksponen · Mudah", q:String.raw`Jika \(\left(\dfrac{1}{m^2}\right)^4=m^p\), maka nilai \(p\) adalah ....`,
+    o:["\\(-8\\)","\\(-6\\)","\\(2\\)","\\(6\\)","\\(8\\)"], a:0,
+    s:[String.raw`\(\dfrac{1}{m^2}=m^{-2}\)`, String.raw`\((m^{-2})^4=m^{-8}\)`, String.raw`\(m^{-8}=m^p \Rightarrow p=-8\)`], ans:"\\(p=-8\\)" },
+
+  { lvl:"Eksponen · Mudah", q:String.raw`Bentuk sederhana dari \(\dfrac{100\,p^{-4}q^{2}}{10\,p^{6}q^{-3}}\) adalah ....`,
+    o:["\\(10\\,p^{2}q^{-1}\\)","\\(10\\,p^{-10}q^{5}\\)","\\(90\\,p^{-10}q^{5}\\)","\\(10\\,p^{10}q^{-5}\\)","\\(10\\,p^{-24}q^{-6}\\)"], a:1,
+    s:["Bagi koefisien: \\(100:10=10\\)", String.raw`Pangkat \(p\): \(p^{-4-6}=p^{-10}\)`, String.raw`Pangkat \(q\): \(q^{2-(-3)}=q^{5}\)`], ans:"\\(10\\,p^{-10}q^{5}\\)" },
+
+  { lvl:"Eksponen · Mudah", q:String.raw`Nilai \(x\) yang memenuhi \(5^{x-9}=25^{3-x}\) adalah ....`,
+    o:["\\(3\\)","\\(4\\)","\\(5\\)","\\(6\\)","\\(9\\)"], a:2,
+    s:[String.raw`\(25^{3-x}=(5^2)^{3-x}=5^{6-2x}\)`, String.raw`Basis sama: \(x-9=6-2x\)`, String.raw`\(3x=15 \Rightarrow x=5\)`], ans:"\\(x=5\\)" },
+
+  { lvl:"Eksponen · Sedang", q:String.raw`Nilai \(x\) yang memenuhi \(4^{3x-1}=\dfrac{1}{8^{x-1}}\) adalah ....`,
+    o:["\\(\\tfrac13\\)","\\(\\tfrac49\\)","\\(\\tfrac59\\)","\\(\\tfrac23\\)","\\(1\\)"], a:2,
+    s:[String.raw`Ubah ke basis 2: \(4^{3x-1}=2^{6x-2}\)`, String.raw`\(\dfrac{1}{8^{x-1}}=2^{-3(x-1)}=2^{-3x+3}\)`, String.raw`\(6x-2=-3x+3 \Rightarrow 9x=5\)`, String.raw`\(x=\tfrac59\)`], ans:"\\(x=\\tfrac59\\)" },
+
+  { lvl:"Eksponen · Sedang", q:String.raw`Bentuk sederhana dari \(2\sqrt{20}+3\sqrt{45}-\sqrt{80}+\sqrt{125}\) adalah ....`,
+    o:["\\(10\\sqrt5\\)","\\(12\\sqrt5\\)","\\(14\\sqrt5\\)","\\(16\\sqrt5\\)","\\(22\\sqrt5\\)"], a:2,
+    s:[String.raw`\(2\sqrt{20}=2\cdot2\sqrt5=4\sqrt5\)`, String.raw`\(3\sqrt{45}=3\cdot3\sqrt5=9\sqrt5\)`, String.raw`\(\sqrt{80}=4\sqrt5\), \(\sqrt{125}=5\sqrt5\)`, String.raw`\(4\sqrt5+9\sqrt5-4\sqrt5+5\sqrt5=14\sqrt5\)`], ans:"\\(14\\sqrt5\\)" },
+
+  { lvl:"Eksponen · Sedang", q:String.raw`Bentuk rasional dari \(\dfrac{5}{2\sqrt3+\sqrt7}\) adalah ....`,
+    o:["\\(2\\sqrt3+\\sqrt7\\)","\\(2\\sqrt3-\\sqrt7\\)","\\(\\sqrt7-2\\sqrt3\\)","\\(5(2\\sqrt3-\\sqrt7)\\)","\\(\\tfrac{2\\sqrt3-\\sqrt7}{5}\\)"], a:1,
+    s:[String.raw`Kalikan dengan sekawan \(\dfrac{2\sqrt3-\sqrt7}{2\sqrt3-\sqrt7}\)`, String.raw`Penyebut: \((2\sqrt3)^2-(\sqrt7)^2=12-7=5\)`, String.raw`\(\dfrac{5(2\sqrt3-\sqrt7)}{5}=2\sqrt3-\sqrt7\)`], ans:"\\(2\\sqrt3-\\sqrt7\\)" },
+
+  { lvl:"Eksponen · Sedang", q:String.raw`Bentuk sederhana dari \(\left(\dfrac{5m^{-3}n^{2}}{m^{2}n^{-4}}\right)^{2}\) adalah ....`,
+    o:["\\(25\\,m^{-10}n^{12}\\)","\\(10\\,m^{-10}n^{12}\\)","\\(25\\,m^{-2}n^{-4}\\)","\\(25\\,m^{10}n^{-12}\\)","\\(5\\,m^{-5}n^{6}\\)"], a:0,
+    s:[String.raw`Di dalam kurung: \(m^{-3-2}=m^{-5}\), \(n^{2-(-4)}=n^{6}\)`, String.raw`Jadi \((5m^{-5}n^{6})^2\)`, String.raw`\(=25\,m^{-10}n^{12}\)`], ans:"\\(25\\,m^{-10}n^{12}\\)" },
+
+  { lvl:"Eksponen · Sulit", q:String.raw`Nilai \(x\) yang memenuhi \(4^{x+3}=\sqrt[3]{8^{x+3}}\) adalah ....`,
+    o:["\\(-6\\)","\\(-3\\)","\\(0\\)","\\(3\\)","\\(6\\)"], a:1,
+    s:[String.raw`\(4^{x+3}=2^{2x+6}\)`, String.raw`\(\sqrt[3]{8^{x+3}}=(2^{3(x+3)})^{1/3}=2^{x+3}\)`, String.raw`\(2x+6=x+3 \Rightarrow x=-3\)`], ans:"\\(x=-3\\)" },
+
+  { lvl:"Eksponen · Sulit (fungsi)", q:String.raw`Diketahui \(f(x)=2^{x+1}-3\). Nilai \(f(3)\) adalah ....`,
+    o:["\\(5\\)","\\(13\\)","\\(16\\)","\\(19\\)","\\(29\\)"], a:1,
+    s:[String.raw`\(f(3)=2^{3+1}-3\)`, String.raw`\(=2^4-3=16-3\)`, "\\(=13\\)"], ans:"\\(13\\)" },
+
+  { lvl:"Eksponen · Sulit (aplikasi)", q:String.raw`Massa \(y\) gram zat radioaktif setelah \(t\) tahun dirumuskan \(y=10\left(\tfrac12\right)^{t/25}\). Massa zat setelah 50 tahun adalah ....`,
+    o:["\\(10\\) gram","\\(5\\) gram","\\(2{,}5\\) gram","\\(1{,}25\\) gram","\\(0{,}5\\) gram"], a:2,
+    s:[String.raw`Substitusi \(t=50\): \(y=10\left(\tfrac12\right)^{50/25}\)`, String.raw`\(=10\left(\tfrac12\right)^{2}=10\cdot\tfrac14\)`, "\\(=2{,}5\\) gram (massa awal saat \\(t=0\\) adalah 10 gram)"], ans:"\\(2{,}5\\) gram" },
+
+  // ---------- LOGARITMA ----------
+  { lvl:"Logaritma · Mudah", q:`Nilai dari \\(${L(2,32)}+${L(3,"\\tfrac19")}\\) adalah ....`,
+    o:["\\(3\\)","\\(5\\)","\\(7\\)","\\(-3\\)","\\(\\tfrac52\\)"], a:0,
+    s:[`\\(${L(2,32)}=5\\) karena \\(2^5=32\\)`, `\\(${L(3,"\\tfrac19")}=-2\\) karena \\(3^{-2}=\\tfrac19\\)`, "\\(5+(-2)=3\\)"], ans:"\\(3\\)" },
+
+  { lvl:"Logaritma · Mudah", q:`Nilai \\(x\\) jika \\(${L(2,"x")}=5\\) adalah ....`,
+    o:["\\(10\\)","\\(25\\)","\\(32\\)","\\(64\\)","\\(7\\)"], a:2,
+    s:[`Ubah ke bentuk pangkat: \\(${L(2,"x")}=5 \\Leftrightarrow x=2^5\\)`, "\\(x=32\\)"], ans:"\\(x=32\\)" },
+
+  { lvl:"Logaritma · Mudah", q:`Nilai dari \\(${L(4,8)}\\) adalah ....`,
+    o:["\\(\\tfrac23\\)","\\(\\tfrac32\\)","\\(2\\)","\\(\\tfrac12\\)","\\(3\\)"], a:1,
+    s:[`Ganti basis 2: \\(${L(4,8)}=\\dfrac{${L(2,8)}}{${L(2,4)}}\\)`, "\\(=\\dfrac{3}{2}\\)"], ans:"\\(\\tfrac32\\)" },
+
+  { lvl:"Logaritma · Sedang", q:`Hasil dari \\(${L(6,"12\\sqrt2")}+${L(6,"\\sqrt3")}+${L(6,18)}-${L(6,2)}-${L(6,3)}\\) adalah ....`,
+    o:["\\(2\\)","\\(\\tfrac52\\)","\\(3\\)","\\(\\tfrac72\\)","\\(6\\)"], a:1,
+    s:[`Gabungkan: \\(${L(6,"\\dfrac{12\\sqrt2\\cdot\\sqrt3\\cdot18}{2\\cdot3}")}\\)`, "Numerus: \\(\\dfrac{216\\sqrt6}{6}=36\\sqrt6=6^2\\cdot6^{1/2}=6^{5/2}\\)", `\\(${L(6,"6^{5/2}")}=\\tfrac52\\)`], ans:"\\(\\tfrac52\\)" },
+
+  { lvl:"Logaritma · Sedang", q:`Diketahui \\(${L(2,3)}=p\\). Nilai \\(${L(2,12)}\\) dalam \\(p\\) adalah ....`,
+    o:["\\(4p\\)","\\(2p\\)","\\(p+2\\)","\\(p+4\\)","\\(2p+1\\)"], a:2,
+    s:["\\(12=4\\cdot3\\)", `\\(${L(2,12)}=${L(2,4)}+${L(2,3)}\\)`, "\\(=2+p\\)"], ans:"\\(p+2\\)" },
+
+  { lvl:"Logaritma · Sedang", q:`Nilai \\(x\\) yang memenuhi \\(${L(2,"x")}+${L(2,"(x-2)")}=3\\) adalah ....`,
+    o:["\\(-2\\)","\\(2\\)","\\(4\\)","\\(-2\\) dan \\(4\\)","\\(8\\)"], a:2,
+    s:[`\\(${L(2,"x(x-2)")}=3 \\Rightarrow x^2-2x=8\\)`, "\\(x^2-2x-8=0 \\Rightarrow (x-4)(x+2)=0\\)", "\\(x=4\\) atau \\(x=-2\\)", "Syarat numerus: \\(x>0\\) dan \\(x-2>0\\), jadi \\(x>2\\). \\(x=-2\\) tidak memenuhi"], ans:"\\(x=4\\)" },
+
+  { lvl:"Logaritma · Sedang", q:`Nilai \\(x\\) yang memenuhi \\(${L(5,"(x+4)")}-${L(5,"(x-2)")}=1\\) adalah ....`,
+    o:["\\(\\tfrac32\\)","\\(3\\)","\\(\\tfrac72\\)","\\(\\tfrac{14}{3}\\)","\\(6\\)"], a:2,
+    s:[`\\(${L(5,"\\dfrac{x+4}{x-2}")}=1 \\Rightarrow \\dfrac{x+4}{x-2}=5\\)`, "\\(x+4=5x-10 \\Rightarrow 4x=14\\)", "\\(x=\\tfrac72\\); cek syarat: \\(x-2=\\tfrac32>0\\) ✓"], ans:"\\(x=\\tfrac72\\)" },
+
+  { lvl:"Logaritma · Sulit", q:`Diketahui \\(x=${L(3,"\\tfrac{1}{125}")}\\cdot${L(8,9)}\\cdot${L(5,64)}\\). Nilai \\(x\\) adalah ....`,
+    o:["\\(-18\\)","\\(-12\\)","\\(-6\\)","\\(6\\)","\\(12\\)"], a:1,
+    s:[`\\(${L(3,"\\tfrac1{125}")}=${L(3,"5^{-3}")}=-3\\,${L(3,5)}\\)`, `\\(${L(8,9)}=${L("2^3","3^2")}=\\tfrac23\\,${L(2,3)}\\)`, `\\(${L(5,64)}=6\\,${L(5,2)}\\)`, `\\(x=(-3)\\cdot\\tfrac23\\cdot6\\cdot(${L(3,5)}\\cdot${L(5,2)}\\cdot${L(2,3)})=-12\\cdot${L(3,3)}\\)`, "\\(x=-12\\cdot1=-12\\)"], ans:"\\(-12\\)" },
+
+  { lvl:"Logaritma · Sulit", q:`Jumlah semua nilai \\(x\\) yang memenuhi \\((${L(2,"x")})^2-3\\,${L(2,"x")}+2=0\\) adalah ....`,
+    o:["\\(3\\)","\\(4\\)","\\(6\\)","\\(8\\)","\\(2\\)"], a:2,
+    s:[`Misalkan \\(y=${L(2,"x")}\\): \\(y^2-3y+2=0\\)`, "\\((y-1)(y-2)=0 \\Rightarrow y=1\\) atau \\(y=2\\)", "\\(y=1 \\Rightarrow x=2\\); \\(y=2 \\Rightarrow x=4\\)", "Jumlah: \\(2+4=6\\)"], ans:"\\(6\\)" },
+
+  { lvl:"Logaritma · Sulit (aplikasi)", q:`Tingkat kebisingan dirumuskan \\(L=10\\,${L(10,"\\dfrac{I}{I_0}")}\\) desibel. Jika intensitas suara \\(I=1000\\,I_0\\), maka \\(L\\) adalah ....`,
+    o:["\\(3\\) dB","\\(10\\) dB","\\(30\\) dB","\\(100\\) dB","\\(1000\\) dB"], a:2,
+    s:[`\\(L=10\\,${L(10,1000)}\\)`, `\\(${L(10,1000)}=3\\) karena \\(10^3=1000\\)`, "\\(L=10\\cdot3=30\\) dB"], ans:"\\(30\\) dB" },
+];
+
+const quiz = document.getElementById('quiz');
+const HURUF = "ABCDE";
+
+function render() {
+  let html = '<div class="section">BAGIAN 1 — EKSPONEN &amp; BENTUK AKAR (Soal 1–10)</div>';
+  SOAL.forEach((s, i) => {
+    if (i === 10) html += '<div class="section">BAGIAN 2 — LOGARITMA (Soal 11–20)</div>';
+    html += `<div class="card" id="c${i}">
+      <div class="lvl">${s.lvl}<span class="badge" id="b${i}" hidden></span></div>
+      <div class="q">${i + 1}. ${s.q}</div>
+      <div class="opts">${s.o.map((o, j) =>
+        `<label id="l${i}_${j}"><input type="radio" name="q${i}" value="${j}"> <b>${HURUF[j]}.</b> ${o}</label>`).join('')}</div>
+      <div class="sol"><b>Pembahasan:</b><ol>${s.s.map(t => `<li>${t}</li>`).join('')}</ol>
+        <span class="ans">Jawaban: ${HURUF[s.a]}. ${s.ans}</span></div>
+    </div>`;
+  });
+  quiz.innerHTML = html;
+  renderMathInElement(document.body, { delimiters:[{left:"\\(", right:"\\)", display:false}], throwOnError:false });
+}
+
+function periksa() {
+  const kosong = SOAL.filter((_, i) => !document.querySelector(`input[name=q${i}]:checked`)).length;
+  if (kosong && !confirm(`Masih ada ${kosong} soal yang belum dijawab. Tetap periksa?`)) return;
+  let benar = 0;
+  SOAL.forEach((s, i) => {
+    const pilih = document.querySelector(`input[name=q${i}]:checked`);
+    const b = document.getElementById('b' + i);
+    document.getElementById('l' + i + '_' + s.a).classList.add('correct');
+    if (pilih && +pilih.value === s.a) { benar++; b.textContent = 'BENAR'; b.className = 'badge ok'; }
+    else {
+      if (pilih) document.getElementById('l' + i + '_' + pilih.value).classList.add('wrong');
+      b.textContent = pilih ? 'SALAH' : 'TIDAK DIJAWAB'; b.className = 'badge no';
+    }
+    b.hidden = false;
+    document.getElementById('c' + i).classList.add('done');
+    document.querySelectorAll(`input[name=q${i}]`).forEach(r => r.disabled = true);
+  });
+  const nilai = benar * 5;
+  const nama = document.getElementById('nama').value.trim();
+  document.getElementById('resName').textContent = nama ? `Hasil untuk ${nama}` : 'Hasil';
+  document.getElementById('resScore').textContent = nilai;
+  document.getElementById('resText').textContent = `${benar} benar, ${20 - benar} salah dari 20 soal. ` +
+    (nilai >= 80 ? 'Hebat, pertahankan!' : nilai >= 60 ? 'Bagus, pelajari lagi pembahasan soal yang salah.' : 'Ayo baca pembahasan dan coba lagi!');
+  const r = document.getElementById('result');
+  r.style.display = 'block';
+  r.scrollIntoView({ behavior:'smooth' });
+  document.getElementById('submit').disabled = true;
+}
+
+function ulangi() {
+  document.getElementById('result').style.display = 'none';
+  document.getElementById('submit').disabled = false;
+  render();
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  render();
+  document.getElementById('submit').onclick = periksa;
+  document.getElementById('reset').onclick = ulangi;
+});
+</script>
+</body>
+</html>

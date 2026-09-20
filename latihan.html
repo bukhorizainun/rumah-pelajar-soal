@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rumah Pelajar – Latihan Soal</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><b>RUMAH PELAJAR</b><a href="index.html">&larr; Kembali ke daftar soal</a></header>
+<main>
+  <div class="title">
+    <small>RUMAH PELAJAR</small>
+    <h1 id="judul">Latihan Soal</h1>
+    <p id="subjudul"></p>
+  </div>
+
+  <div class="card ident">
+    <label for="nama"><b>Nama:</b></label>
+    <input id="nama" placeholder="Tulis namamu di sini">
+  </div>
+
+  <div id="quiz"></div>
+
+  <div class="card" id="result">
+    <div id="resName"></div>
+    <div class="score" id="resScore"></div>
+    <div id="resText"></div>
+  </div>
+
+  <div class="btns">
+    <button id="submit">Selesai &amp; Periksa Jawaban</button>
+    <button id="reset" class="sec">Ulangi</button>
+    <button id="toggleKunci" class="sec">Lihat Kunci Jawaban</button>
+  </div>
+
+  <div class="card" id="kunci" style="display:none">
+    <b style="color:var(--g)">Kunci Jawaban</b>
+    <div style="overflow-x:auto;margin-top:8px"><table class="kunci" id="tblKunci"></table></div>
+    <p class="note">Tanda &ndash; berarti soal memakai gambar pada naskah asli, sehingga kunci tidak dicantumkan.</p>
+  </div>
+
+  <footer>Selamat belajar! Semoga sukses selalu menyertai perjalanan belajarmu. — Rumah Pelajar</footer>
+</main>
+
+<script src="data/matematika.js"></script>
+<script src="data/inggris.js"></script>
+<script src="data/sains.js"></script>
+<script>
+(function () {
+  var HURUF = ['a', 'b', 'c', 'd'];
+  var id = new URLSearchParams(location.search).get('paket');
+  var paket = window.BANK.filter(function (p) { return p.id === id; })[0] || window.BANK[0];
+
+  document.title = 'Rumah Pelajar – ' + paket.label + ' ' + paket.tipe;
+  document.getElementById('judul').textContent = paket.label.toUpperCase();
+  document.getElementById('subjudul').textContent =
+    paket.tipe + ' · Tahun ' + paket.tahun + ' · ' + paket.soal.length + ' soal pilihan ganda';
+
+  var quiz = document.getElementById('quiz');
+  paket.soal.forEach(function (s, i) {
+    var punyaKunci = s[2] !== null;
+    var card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.idx = i;
+    var opts = s[1].map(function (o, j) {
+      return '<label data-opt="' + j + '"><input type="radio" name="q' + i + '" value="' + j + '"><span>' +
+        HURUF[j] + '. ' + o + '</span></label>';
+    }).join('');
+    card.innerHTML =
+      '<div class="lvl">Soal ' + (i + 1) + (punyaKunci ? '' : ' <span class="badge img">gambar</span>') + '</div>' +
+      '<div class="q">' + s[0] + '</div>' +
+      '<div class="opts">' + opts + '</div>' +
+      '<div class="sol"></div>';
+    quiz.appendChild(card);
+  });
+
+  function periksa() {
+    var benar = 0, total = 0;
+    paket.soal.forEach(function (s, i) {
+      var card = quiz.children[i];
+      var kunci = s[2];
+      var dipilih = card.querySelector('input:checked');
+      var sol = card.querySelector('.sol');
+      card.classList.add('done');
+      if (kunci === null) {
+        sol.innerHTML = 'Soal ini memakai gambar pada naskah asli, jadi kunci jawabannya tidak dicantumkan.';
+        return;
+      }
+      total++;
+      var labels = card.querySelectorAll('.opts label');
+      labels[kunci].classList.add('correct');
+      if (dipilih) {
+        var pilih = Number(dipilih.value);
+        if (pilih === kunci) benar++;
+        else labels[pilih].classList.add('wrong');
+      }
+      sol.innerHTML = 'Jawaban benar: <span class="ans">' + HURUF[kunci] + '. ' + s[1][kunci] + '</span>' +
+        (dipilih
+          ? (Number(dipilih.value) === kunci ? ' <span class="badge ok">benar</span>' : ' <span class="badge no">salah</span>')
+          : ' <span class="badge no">belum dijawab</span>');
+    });
+    var nama = document.getElementById('nama').value.trim();
+    var box = document.getElementById('result');
+    box.style.display = 'block';
+    document.getElementById('resName').textContent = nama ? 'Hasil untuk ' + nama : 'Hasil latihanmu';
+    document.getElementById('resScore').textContent = benar + ' / ' + total;
+    var persen = total ? Math.round(benar / total * 100) : 0;
+    document.getElementById('resText').textContent =
+      'Nilai ' + persen + '. ' + (persen >= 80 ? 'Hebat, pertahankan!' :
+        persen >= 60 ? 'Sudah bagus, ayo pelajari lagi yang masih salah.' :
+        'Jangan menyerah, baca lagi pembahasannya lalu ulangi.');
+    box.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.getElementById('submit').addEventListener('click', periksa);
+  document.getElementById('reset').addEventListener('click', function () {
+    quiz.querySelectorAll('input').forEach(function (r) { r.checked = false; });
+    quiz.querySelectorAll('.card').forEach(function (c) { c.classList.remove('done'); });
+    quiz.querySelectorAll('label').forEach(function (l) { l.classList.remove('correct', 'wrong'); });
+    document.getElementById('result').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  var tbl = document.getElementById('tblKunci');
+  var baris = '<tr><th>No</th><th>Kunci</th><th>No</th><th>Kunci</th><th>No</th><th>Kunci</th><th>No</th><th>Kunci</th><th>No</th><th>Kunci</th></tr>';
+  for (var r = 0; r < 5; r++) {
+    baris += '<tr>';
+    for (var c = 0; c < 5; c++) {
+      var n = r + c * 5;
+      var s = paket.soal[n];
+      baris += '<td>' + (n + 1) + '</td><td><b>' + (s && s[2] !== null ? HURUF[s[2]].toUpperCase() : '&ndash;') + '</b></td>';
+    }
+    baris += '</tr>';
+  }
+  tbl.innerHTML = baris;
+
+  document.getElementById('toggleKunci').addEventListener('click', function () {
+    var k = document.getElementById('kunci');
+    var buka = k.style.display === 'none';
+    k.style.display = buka ? 'block' : 'none';
+    this.textContent = buka ? 'Sembunyikan Kunci Jawaban' : 'Lihat Kunci Jawaban';
+    if (buka) k.scrollIntoView({ behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>
