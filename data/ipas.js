@@ -1,0 +1,95 @@
+// Bank soal IPAS SD - disusun mengikuti kisi-kisi Sumatif Tengah Semester (STS) Ganjil
+// Tahun Pelajaran 2026/2027. Semua butir ditulis ulang dalam bentuk pilihan ganda.
+window.BANK = window.BANK || [];
+
+window.BANK.push({
+  id: "ipas-kelas3-sts1", mapel: "ipas", label: "IPAS Kelas 3",
+  tipe: "STS Ganjil", tahun: 2026,
+  soal: [
+    // --- Bab 1: Keajaiban Tubuhku (butir 1-10, 15, 21-24, 27, 30-33 pada kisi-kisi) ---
+    ["Rina melihat pelangi dengan warna merah, kuning, dan hijau. Indra yang dipakai Rina untuk mengenali warna itu adalah ...", ["Mata", "Telinga", "Hidung", "Lidah"], 0],
+    ["Ketika bel sekolah berbunyi, kita mengetahuinya dengan indra ...", ["Kulit", "Telinga", "Mata", "Lidah"], 1],
+    ["Andi mencium bau gorengan, lalu melihat penjualnya, kemudian mencicipi gorengan itu. Urutan indra yang bekerja pada kegiatan Andi adalah ...", ["Hidung, mata, lidah", "Mata, hidung, lidah", "Lidah, mata, hidung", "Hidung, lidah, mata"], 0],
+    ["Bagaimana urutan kerja pancaindra sampai kita mengenali sesuatu?", ["Otak menerima rangsang lalu diteruskan ke indra", "Indra menerima rangsang lalu diteruskan ke otak", "Otot menerima rangsang lalu diteruskan ke indra", "Kulit menerima rangsang lalu diteruskan ke tulang"], 1],
+    ["Fungsi kulit sebagai pancaindra adalah untuk ...", ["Merasakan sentuhan, panas, dan dingin", "Mengenali bau", "Mengecap rasa manis", "Mendengar suara"], 0],
+    ["Daun telinga berbentuk lebar dan melengkung. Bentuk itu berguna untuk ...", ["Menahan air masuk", "Mengumpulkan suara agar masuk ke lubang telinga", "Menyaring debu", "Menjaga suhu kepala"], 1],
+    ["Ibu meminta Doni memeriksa apakah air mandinya sudah hangat. Indra yang dipakai Doni adalah ...", ["Lidah", "Hidung", "Kulit", "Telinga"], 2],
+    ["Bola mata berbentuk bulat. Bentuk bulat ini bermanfaat agar mata dapat ...", ["Bergerak ke berbagai arah untuk melihat", "Menahan suara keras", "Mencium bau harum", "Merasakan panas"], 0],
+    ["Saat bermain di halaman, Siti mencium bau asap yang menyengat. Tindakan yang paling tepat adalah ...", ["Mendekati sumber asap", "Menghirup asap dalam-dalam", "Menjauh dari asap dan memberi tahu orang dewasa", "Diam saja dan melanjutkan bermain"], 2],
+    ["Cara menjaga kesehatan mata yang benar adalah ...", ["Membaca sambil tiduran", "Membaca di tempat yang terang", "Menonton televisi dari jarak dekat", "Mengucek mata dengan tangan kotor"], 1],
+    ["Apa yang dimaksud dengan sejarah keluarga?", ["Daftar barang milik keluarga", "Rencana kegiatan keluarga esok hari", "Peristiwa yang pernah dialami keluarga pada masa lalu", "Jumlah anggota keluarga saat ini"], 2],
+    ["Keluarga Bayu menyimpan foto lama kakek dan nenek. Manfaat foto lama itu adalah ...", ["Mengetahui kejadian dan keadaan keluarga pada masa lalu", "Menambah jumlah anggota keluarga", "Mengganti silsilah keluarga", "Membuat rumah terlihat mahal"], 0],
+    ["Perilaku yang menunjukkan pelestarian tradisi keluarga adalah ...", ["Melupakan bahasa daerah", "Ikut membuat makanan khas keluarga saat hari raya", "Menolak berkumpul dengan saudara", "Membuang foto keluarga yang lama"], 1],
+    ["Gotong royong adalah ...", ["Bekerja sendiri agar cepat selesai", "Bekerja bersama-sama untuk kepentingan bersama", "Membayar orang lain untuk bekerja", "Menunggu orang lain menyelesaikan pekerjaan"], 1],
+    ["Bagian mata yang bening dan berfungsi meneruskan cahaya masuk ke dalam mata adalah ...", ["Kornea", "Alis", "Bulu mata", "Kelopak mata"], 0],
+    ["Dahulu jalan di desa masih berupa tanah, sekarang sudah dilapisi aspal. Perubahan ini termasuk perubahan ...", ["Bahasa", "Pakaian", "Makanan", "Sarana atau infrastruktur"], 3],
+    ["Bahasa daerah adalah ...", ["Bahasa resmi seluruh negara", "Bahasa yang dipakai masyarakat di suatu daerah tertentu", "Bahasa yang hanya dipakai di sekolah", "Bahasa yang dipakai untuk menulis surat resmi negara"], 1],
+    ["Dahulu orang berkirim kabar dengan surat dan bepergian dengan delman. Sekarang orang memakai telepon genggam dan mobil. Hal ini menunjukkan bahwa ...", ["Transportasi dan komunikasi berkembang menjadi lebih cepat", "Transportasi dan komunikasi tidak berubah", "Orang semakin sulit berkirim kabar", "Perjalanan menjadi semakin lama"], 0],
+    ["Salah satu penyebab terjadinya perubahan sosial di masyarakat adalah ...", ["Kemajuan teknologi", "Berkurangnya jumlah hari", "Warna rumah penduduk", "Bentuk daun di kebun"], 0],
+    ["Alat komunikasi masa kini yang banyak dipakai orang adalah ...", ["Kentongan", "Telepon genggam", "Asap api", "Burung merpati"], 1],
+    ["Alat yang dapat dipakai untuk mengirim pesan sekaligus melakukan panggilan video adalah ...", ["Radio", "Kentongan", "Telepon pintar", "Surat"], 2],
+    ["Telinga berfungsi sebagai indra ...", ["Penglihat", "Pendengar", "Pengecap", "Pembau"], 1],
+    ["Mata dan telinga sama-sama termasuk pancaindra, tetapi berbeda karena ...", ["Mata untuk melihat, telinga untuk mendengar", "Mata untuk mendengar, telinga untuk melihat", "Keduanya untuk mengecap rasa", "Keduanya untuk mencium bau"], 0],
+    ["Kulit disebut indra peraba karena kulit dapat ...", ["Mengenali warna benda", "Merasakan halus kasarnya permukaan benda", "Mencium bau benda", "Mendengar bunyi benda"], 1],
+    ["Rambut halus di dalam hidung berfungsi untuk ...", ["Menyaring kotoran dan debu pada udara yang dihirup", "Menambah keindahan wajah", "Mengeraskan suara", "Mengecap rasa makanan"], 0],
+    ["Kegiatan saling membantu antarwarga untuk membersihkan lingkungan disebut ...", ["Gotong royong", "Perlombaan", "Pertandingan", "Rekreasi"], 0],
+    ["Pesan yang diterima pancaindra diolah di ...", ["Jantung", "Otak", "Paru-paru", "Lambung"], 1],
+    ["Waktu atau masa yang sudah terjadi dan tidak dapat diulang disebut masa ...", ["Kini", "Depan", "Lalu", "Nanti"], 2],
+    ["Dalam silsilah keluarga, orang tua dari ayah kita disebut ...", ["Paman dan bibi", "Kakek dan nenek", "Kakak dan adik", "Sepupu"], 1],
+    ["Setelah lama membaca buku, tindakan yang tepat untuk mengistirahatkan mata adalah ...", ["Menutup mata sejenak dan memandang benda yang jauh", "Membaca lebih dekat lagi", "Mengucek mata kuat-kuat", "Menyalakan lampu yang menyilaukan"], 0],
+    ["Lima pancaindra manusia adalah ...", ["Mata, telinga, hidung, lidah, kulit", "Mata, telinga, tangan, kaki, kulit", "Mata, hidung, jantung, lidah, kulit", "Telinga, hidung, lidah, rambut, kuku"], 0],
+    ["Pasangan indra dan fungsinya yang benar adalah ...", ["Mata untuk melihat, kulit untuk meraba, telinga untuk mendengar", "Mata untuk meraba, kulit untuk melihat, telinga untuk mencium", "Mata untuk mendengar, kulit untuk mengecap, telinga untuk melihat", "Mata untuk mencium, kulit untuk mendengar, telinga untuk meraba"], 0],
+    ["Saat mencium asap kebakaran, tindakan terbaik beserta alasannya adalah ...", ["Tetap bermain, karena asap akan hilang sendiri", "Menjauh dan menutup hidung, karena asap dapat mengganggu pernapasan", "Mendekat untuk melihat, karena rasa ingin tahu", "Menghirup dalam-dalam, karena melatih paru-paru"], 1],
+    ["Mengapa sejarah keluarga penting untuk diketahui?", ["Supaya kita mengenal asal usul keluarga dan menghargai jasa pendahulu", "Supaya kita bisa mengubah silsilah keluarga", "Supaya kita bisa melupakan masa lalu", "Supaya kita tidak perlu berkenalan dengan saudara"], 0],
+    ["Contoh perubahan alat komunikasi dari dahulu ke sekarang adalah ...", ["Kentongan menjadi telepon genggam, surat menjadi pesan singkat, radio menjadi internet", "Sepeda menjadi motor, delman menjadi mobil, perahu menjadi kapal", "Lilin menjadi lampu, kipas menjadi kipas angin, sumur menjadi keran", "Tanah menjadi aspal, gubuk menjadi rumah batu, jalan setapak menjadi jalan raya"], 0]
+  ]
+});
+
+window.BANK.push({
+  id: "ipas-kelas4-sts1", mapel: "ipas", label: "IPAS Kelas 4",
+  tipe: "STS Ganjil", tahun: 2026,
+  soal: [
+    // --- Bab 1: Mengubah Bentuk Energi ---
+    ["Energi adalah ...", ["Kemampuan untuk melakukan usaha atau kerja", "Benda yang dapat dilihat mata", "Alat untuk mengukur panas", "Zat penyusun semua benda"], 0],
+    ["Perubahan energi yang terjadi pada kipas angin yang menyala adalah ...", ["Energi listrik menjadi energi gerak", "Energi gerak menjadi energi listrik", "Energi cahaya menjadi energi panas", "Energi kimia menjadi energi bunyi"], 0],
+    ["Saat radio dinyalakan, perubahan energi yang terjadi adalah ...", ["Energi bunyi menjadi energi listrik", "Energi listrik menjadi energi bunyi", "Energi panas menjadi energi gerak", "Energi cahaya menjadi energi kimia"], 1],
+    ["Panel surya di atap rumah mengubah energi ...", ["Gerak menjadi panas", "Kimia menjadi bunyi", "Cahaya matahari menjadi energi listrik", "Listrik menjadi cahaya"], 2],
+    ["Senter memakai baterai untuk menyala. Urutan perubahan energi pada senter adalah ...", ["Energi kimia menjadi energi listrik lalu menjadi energi cahaya", "Energi cahaya menjadi energi listrik lalu menjadi energi kimia", "Energi listrik menjadi energi kimia lalu menjadi energi gerak", "Energi gerak menjadi energi cahaya lalu menjadi energi kimia"], 0],
+    ["Setelah makan, tubuh kita dapat berlari dan bermain. Perubahan energi yang terjadi di dalam tubuh adalah ...", ["Energi listrik menjadi energi kimia", "Energi kimia dari makanan menjadi energi gerak", "Energi cahaya menjadi energi panas", "Energi bunyi menjadi energi gerak"], 1],
+    ["Alat rumah tangga yang mengubah energi listrik menjadi energi panas adalah ...", ["Kipas angin", "Setrika listrik", "Radio", "Mesin cuci"], 1],
+    ["Perubahan energi yang terjadi pada setrika listrik adalah ...", ["Energi listrik menjadi energi panas", "Energi panas menjadi energi listrik", "Energi listrik menjadi energi bunyi", "Energi gerak menjadi energi panas"], 0],
+    ["Berikut ini alat yang mengubah energi listrik menjadi energi gerak adalah ...", ["Lampu, setrika, dan oven", "Kipas angin, blender, dan mesin cuci", "Televisi, radio, dan bel", "Kompor, solder, dan rice cooker"], 1],
+    ["Kelompok alat yang sama-sama mengubah energi listrik menjadi energi panas adalah ...", ["Setrika, rice cooker, dan solder", "Kipas angin, blender, dan bor listrik", "Lampu, layar televisi, dan senter", "Bel, radio, dan pengeras suara"], 0],
+    ["Hasil dari proses fotosintesis pada tumbuhan adalah ...", ["Karbon dioksida dan air", "Makanan (zat gula) dan oksigen", "Garam dan mineral", "Klorofil dan akar"], 1],
+    ["Bagian tumbuhan yang berfungsi menyerap sinar matahari untuk fotosintesis adalah ...", ["Akar", "Batang", "Daun", "Bunga"], 2],
+    ["Bagian tumbuhan yang berfungsi menyerap air dan zat hara dari dalam tanah adalah ...", ["Akar", "Daun", "Bunga", "Buah"], 0],
+    ["Dampak positif fotosintesis bagi lingkungan sekitar adalah ...", ["Udara menjadi lebih kotor", "Udara menjadi lebih segar karena bertambahnya oksigen", "Suhu bumi menjadi sangat panas", "Tanah menjadi tandus"], 1],
+    ["Tumbuhan bergerak dengan cara ...", ["Berpindah tempat seperti hewan", "Mengarahkan pertumbuhan batang dan daun ke arah cahaya matahari", "Melompat saat terkena angin", "Berlari mengejar air"], 1],
+    ["Alat yang mengubah energi gerak menjadi energi listrik pada pembangkit listrik adalah ...", ["Generator", "Setrika", "Kompor", "Lampu"], 0],
+    ["Energi yang dimanfaatkan pada Pembangkit Listrik Tenaga Air (PLTA) adalah energi ...", ["Gerak air", "Bunyi", "Kimia baterai", "Suara angin"], 0],
+    ["Sumber energi utama yang menerangi dan menghangatkan bumi adalah ...", ["Bulan", "Bintang", "Matahari", "Api unggun"], 2],
+    ["Fotosintesis adalah ...", ["Proses tumbuhan membuat makanan sendiri dengan bantuan cahaya matahari", "Proses tumbuhan menyerap oksigen pada malam hari", "Proses tumbuhan menggugurkan daunnya", "Proses tumbuhan menyimpan air di batang"], 0],
+    ["Klorofil adalah ...", ["Zat hijau pada daun yang berperan dalam fotosintesis", "Akar cadangan pada tumbuhan", "Kulit batang yang keras", "Cairan manis pada bunga"], 0],
+    ["Bahan yang diperlukan tumbuhan untuk melakukan fotosintesis adalah ...", ["Air, karbon dioksida, dan cahaya matahari", "Air, oksigen, dan angin", "Tanah, garam, dan bunyi", "Gula, oksigen, dan panas api"], 0],
+    // --- Bab 2: Gaya di Sekitar Kita ---
+    ["Berikut ini yang termasuk macam-macam gaya dalam kehidupan sehari-hari adalah ...", ["Gaya otot, gaya gesek, dan gaya magnet", "Gaya suara, gaya warna, dan gaya rasa", "Gaya cahaya, gaya bau, dan gaya bentuk", "Gaya angka, gaya huruf, dan gaya gambar"], 0],
+    ["Sepeda yang direm akan berhenti. Gaya yang bekerja pada rem sepeda adalah gaya ...", ["Magnet", "Gesek", "Pegas", "Gravitasi"], 1],
+    ["Semakin besar gaya gesek yang bekerja pada sebuah benda, maka gerak benda itu akan ...", ["Semakin cepat", "Semakin lambat", "Tetap sama", "Berbalik arah"], 1],
+    ["Bola lebih mudah menggelinding jauh di lantai keramik daripada di rumput. Hal ini terjadi karena ...", ["Permukaan rumput lebih kasar sehingga gaya geseknya lebih besar", "Permukaan keramik lebih kasar daripada rumput", "Bola di rumput lebih ringan", "Rumput menarik bola dengan magnet"], 0],
+    ["Karet ketapel yang ditarik lalu dilepaskan dapat melontarkan batu. Gaya yang bekerja pada ketapel adalah gaya ...", ["Magnet", "Pegas", "Gesek", "Listrik"], 1],
+    ["Pada permainan tarik tambang, regu yang menarik dengan gaya lebih besar akan ...", ["Menarik lawan ke arah regunya", "Tertarik ke arah lawan", "Diam di tempat", "Terjatuh ke belakang lawan"], 0],
+    ["Agar engsel pintu yang berderit menjadi ringan dan mudah dibuka, cara memperkecil gaya geseknya adalah ...", ["Memberi oli atau pelumas pada engsel", "Menambah pasir pada engsel", "Mengecat engsel dengan cat kasar", "Menempelkan karet pada engsel"], 0],
+    ["Gaya adalah ...", ["Tarikan atau dorongan pada suatu benda", "Jumlah benda dalam satu tempat", "Warna permukaan benda", "Berat benda yang diukur dengan penggaris"], 0],
+    ["Gaya otot adalah gaya yang ditimbulkan oleh ...", ["Tarikan magnet", "Kerja otot pada tubuh manusia atau hewan", "Gesekan dua permukaan", "Aliran listrik"], 1],
+    ["Gaya gesek adalah gaya yang timbul karena ...", ["Dua permukaan benda saling bersentuhan dan bergerak", "Dua magnet saling berjauhan", "Benda jatuh ke bawah", "Air mengalir di sungai"], 0],
+    ["Berikut ini yang merupakan pengaruh gaya terhadap benda adalah ...", ["Mengubah bentuk, mengubah arah gerak, dan mengubah kecepatan benda", "Mengubah warna, mengubah bau, dan mengubah rasa benda", "Mengubah nama, mengubah harga, dan mengubah pemilik benda", "Mengubah suara, mengubah cahaya, dan mengubah suhu benda"], 0],
+    ["Bagian magnet yang memiliki gaya tarik atau gaya tolak paling besar adalah ...", ["Kutub magnet", "Bagian tengah magnet", "Seluruh badan magnet sama besar", "Bagian bawah magnet"], 0],
+    ["Benda yang dapat ditarik oleh magnet adalah benda yang terbuat dari ...", ["Kayu", "Besi", "Plastik", "Kaca"], 1],
+    ["Magnet batang memiliki dua kutub, yaitu ...", ["Kutub utara dan kutub selatan", "Kutub timur dan kutub barat", "Kutub atas dan kutub bawah", "Kutub kiri dan kutub kanan"], 0],
+    ["Alat rumah tangga berikut yang dapat ditarik oleh magnet adalah ...", ["Gunting besi", "Sendok plastik", "Gelas kaca", "Talenan kayu"], 0],
+    ["Alat yang memanfaatkan gaya magnet untuk menunjukkan arah mata angin adalah ...", ["Kompas", "Termometer", "Timbangan", "Jam pasir"], 0],
+    ["Berikut ini benda yang tidak dapat ditarik oleh magnet adalah ...", ["Paku besi", "Peniti", "Karet gelang", "Jarum"], 2],
+    ["Dua kutub magnet yang sejenis apabila didekatkan akan ...", ["Saling tarik-menarik", "Saling tolak-menolak", "Menempel kuat", "Berubah menjadi satu kutub"], 1],
+    ["Kelompok alat yang memanfaatkan gaya magnet dalam kehidupan sehari-hari adalah ...", ["Kompas, pintu kulkas, dan pengeras suara", "Gunting, pensil, dan penghapus", "Ember, sapu, dan kain pel", "Buku, meja, dan kursi"], 0]
+  ]
+});

@@ -46,6 +46,7 @@
 <script src="data/matematika.js"></script>
 <script src="data/inggris.js"></script>
 <script src="data/sains.js"></script>
+<script src="data/ipas.js"></script>
 <script>
 (function () {
   var HURUF = ['a', 'b', 'c', 'd'];
@@ -127,13 +128,18 @@
   });
 
   var tbl = document.getElementById('tblKunci');
-  var baris = '<tr><th>No</th><th>Kunci</th><th>No</th><th>Kunci</th><th>No</th><th>Kunci</th><th>No</th><th>Kunci</th><th>No</th><th>Kunci</th></tr>';
-  for (var r = 0; r < 5; r++) {
+  var KOL = 5;
+  var barisJml = Math.ceil(paket.soal.length / KOL);
+  var baris = '<tr>';
+  for (var h = 0; h < KOL; h++) baris += '<th>No</th><th>Kunci</th>';
+  baris += '</tr>';
+  for (var r = 0; r < barisJml; r++) {
     baris += '<tr>';
-    for (var c = 0; c < 5; c++) {
-      var n = r + c * 5;
+    for (var c = 0; c < KOL; c++) {
+      var n = r + c * barisJml;
       var s = paket.soal[n];
-      baris += '<td>' + (n + 1) + '</td><td><b>' + (s && s[2] !== null ? HURUF[s[2]].toUpperCase() : '&ndash;') + '</b></td>';
+      if (!s) { baris += '<td></td><td></td>'; continue; }
+      baris += '<td>' + (n + 1) + '</td><td><b>' + (s[2] !== null ? HURUF[s[2]].toUpperCase() : '&ndash;') + '</b></td>';
     }
     baris += '</tr>';
   }

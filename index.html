@@ -32,6 +32,14 @@
   <div class="section">Sains</div>
   <div class="grid" id="g-sains"></div>
 
+  <div class="section">IPAS SD</div>
+  <div class="card note">
+    Paket IPAS disusun mengikuti kisi-kisi Sumatif Tengah Semester (STS) Ganjil tahun pelajaran
+    2026/2027. Butir isian singkat dan esai pada kisi-kisi ditulis ulang menjadi pilihan ganda
+    supaya bisa langsung diperiksa di halaman ini.
+  </div>
+  <div class="grid" id="g-ipas"></div>
+
   <div class="section">Latihan Lain</div>
   <div class="grid">
     <a class="paket" href="eksponen-logaritma.html">
@@ -46,9 +54,10 @@
 <script src="data/matematika.js"></script>
 <script src="data/inggris.js"></script>
 <script src="data/sains.js"></script>
+<script src="data/ipas.js"></script>
 <script>
 (function () {
-  var order = { matematika: 0, inggris: 1, sains: 2 };
+  var order = { matematika: 0, inggris: 1, sains: 2, ipas: 3 };
   window.BANK.slice().sort(function (a, b) {
     return (order[a.mapel] - order[b.mapel]) || (a.tahun - b.tahun) || a.tipe.localeCompare(b.tipe);
   }).forEach(function (p) {
@@ -59,7 +68,7 @@
     a.className = 'paket';
     a.href = 'latihan.html?paket=' + p.id;
     a.innerHTML = '<b>' + p.label + ' – ' + p.tipe + '</b>' +
-      '<span>Tahun ' + p.tahun + ' · ' + p.soal.length + ' soal · ' + gbr + ' bergambar</span>';
+      '<span>Tahun ' + p.tahun + ' · ' + p.soal.length + ' soal' + (gbr ? ' · ' + gbr + ' bergambar' : '') + '</span>';
     box.appendChild(a);
   });
 })();
