@@ -40,6 +40,14 @@
   </div>
   <div class="grid" id="g-ipas"></div>
 
+  <div class="section">Fisika SMA</div>
+  <div class="card note">
+    Paket Fisika kelas 10 disusun dari ringkasan materi Besaran dan Pengukuran: besaran pokok dan
+    turunan, satuan, dimensi, alat ukur panjang dan massa, ketidakpastian, serta angka penting.
+    Setiap soal dilengkapi pembahasan yang muncul setelah jawaban diperiksa.
+  </div>
+  <div class="grid" id="g-fisika"></div>
+
   <div class="section">Latihan Lain</div>
   <div class="grid">
     <a class="paket" href="eksponen-logaritma.html">
@@ -55,9 +63,10 @@
 <script src="data/inggris.js"></script>
 <script src="data/sains.js"></script>
 <script src="data/ipas.js"></script>
+<script src="data/fisika.js"></script>
 <script>
 (function () {
-  var order = { matematika: 0, inggris: 1, sains: 2, ipas: 3 };
+  var order = { matematika: 0, inggris: 1, sains: 2, ipas: 3, fisika: 4 };
   window.BANK.slice().sort(function (a, b) {
     return (order[a.mapel] - order[b.mapel]) || (a.tahun - b.tahun) || a.tipe.localeCompare(b.tipe);
   }).forEach(function (p) {

@@ -47,6 +47,7 @@
 <script src="data/inggris.js"></script>
 <script src="data/sains.js"></script>
 <script src="data/ipas.js"></script>
+<script src="data/fisika.js"></script>
 <script>
 (function () {
   var HURUF = ['a', 'b', 'c', 'd'];
@@ -103,7 +104,8 @@
       sol.innerHTML = 'Jawaban benar: <span class="ans">' + HURUF[kunci] + '. ' + s[1][kunci] + '</span>' +
         (dipilih
           ? (Number(dipilih.value) === kunci ? ' <span class="badge ok">benar</span>' : ' <span class="badge no">salah</span>')
-          : ' <span class="badge no">belum dijawab</span>');
+          : ' <span class="badge no">belum dijawab</span>') +
+        (s[4] ? '<div class="pemb"><b>Pembahasan:</b> ' + s[4] + '</div>' : '');
     });
     var nama = document.getElementById('nama').value.trim();
     var box = document.getElementById('result');
