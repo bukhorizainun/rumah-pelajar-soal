@@ -4,17 +4,69 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rumah Pelajar – Bank Soal Latihan</title>
+<meta name="description" content="Rumah Pelajar: materi interaktif, latihan soal, dan guru bayangan yang menuntun dengan pertanyaan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header><b>RUMAH PELAJAR</b><span>Bank Soal Latihan</span></header>
+<header><a class="brand" href="index.html">Rumah Pelajar</a><nav><a href="#materi">Materi</a><a href="#bank">Bank soal</a></nav></header>
+
+<section class="hero paper">
+  <canvas class="deco" id="deco" aria-hidden="true"></canvas>
+  <div class="in">
+    <span class="eyebrow">Rumah Pelajar · belajar dengan mencoba</span>
+    <h1>Kerjakan, putar, <em>tanyakan</em>.</h1>
+    <p>Materi interaktif dan bank soal latihan. Gambar bisa digeser dan diputar, dan guru bayangan menuntunmu dengan pertanyaan, bukan dengan jawaban.</p>
+    <div class="chips"><span class="chip"><i></i>Gambar interaktif</span><span class="chip teal"><i></i>Guru bayangan AI</span><span class="chip amber"><i></i>Jawaban &amp; cara di akhir</span></div>
+  </div>
+</section>
+
 <main>
-  <div class="title">
-    <small>RUMAH PELAJAR</small>
-    <h1>BANK SOAL LATIHAN</h1>
-    <p>Latihan pilihan ganda lengkap dengan kunci jawaban</p>
+  <div class="section" id="materi">Materi + Guru Bayangan</div>
+  <div class="feature">
+    <a class="big" href="materikinar30sep.html">
+      <div class="art paper">
+        <svg viewBox="0 0 320 150" aria-hidden="true">
+          <polygon points="70,40 190,40 250,70 130,70" fill="#6557d2" fill-opacity=".18" stroke="#1d1b2e" stroke-width="2"/>
+          <polygon points="70,40 130,70 130,125 70,110" fill="#1fa7b8" fill-opacity=".28" stroke="#1d1b2e" stroke-width="2"/>
+          <polygon points="130,70 250,70 250,82 130,125" fill="#1fa7b8" fill-opacity=".2" stroke="#1d1b2e" stroke-width="2"/>
+          <circle cx="262" cy="108" r="30" fill="#fff" stroke="#1d1b2e" stroke-width="2"/>
+          <path d="M262,108 L292,108 A30,30 0 0 0 283.2,86.8 Z" fill="#e8930c" fill-opacity=".7"/>
+          <circle cx="70" cy="40" r="4" fill="#6557d2"/><circle cx="250" cy="70" r="4" fill="#6557d2"/>
+        </svg>
+      </div>
+      <div class="txt">
+        <span class="tag">30 September</span><span class="tag ai">Guru bayangan</span>
+        <b>Latihan PSTS 1: Bangun Ruang &amp; Lingkaran</b>
+        <p>Tujuh soal: kolam, tenda, kotak buku, limas, tembereng, juring, dan pizza. Gambar 3D bisa diputar.</p>
+      </div>
+    </a>
+    <a class="big" href="barisan-deret.html">
+      <div class="art paper">
+        <svg viewBox="0 0 320 150" aria-hidden="true">
+          <line x1="30" y1="125" x2="300" y2="125" stroke="#1d1b2e" stroke-width="1.5"/><line x1="30" y1="20" x2="30" y2="125" stroke="#1d1b2e" stroke-width="1.5"/>
+          <line x1="30" y1="42" x2="300" y2="42" stroke="#0f9d9a" stroke-width="1.6" stroke-dasharray="6 5"/>
+          <g fill="#0f9d9a"><rect x="56" y="97" width="8" height="8"/><rect x="90" y="75" width="8" height="8"/><rect x="124" y="64" width="8" height="8"/><rect x="158" y="58" width="8" height="8"/><rect x="192" y="55" width="8" height="8"/><rect x="226" y="53" width="8" height="8"/><rect x="260" y="52" width="8" height="8"/></g>
+          <g fill="#6557d2" stroke="#fff" stroke-width="2"><circle cx="60" cy="101" r="6"/><circle cx="94" cy="113" r="6"/><circle cx="128" cy="119" r="6"/><circle cx="162" cy="122" r="6"/><circle cx="196" cy="123" r="6"/><circle cx="230" cy="124" r="6"/><circle cx="264" cy="124" r="6"/></g>
+          <text x="270" y="36" font-family="JetBrains Mono,monospace" font-size="12" font-weight="600" fill="#0f9d9a">S∞</text>
+        </svg>
+      </div>
+      <div class="txt">
+        <span class="tag">Kurikulum Merdeka · Kelas 10</span><span class="tag ai">Guru bayangan</span>
+        <b>Barisan &amp; Deret</b>
+        <p>Materi lengkap, penjelajah barisan interaktif, dan 20 soal dengan jawaban serta cara penyelesaiannya.</p>
+      </div>
+    </a>
   </div>
 
+  <div class="card note" style="margin-top:18px">
+    <b>Apa itu guru bayangan?</b> Guru bayangan mengikuti cara guru membimbing di kelas. Ia tidak memberi jawaban. Ia bertanya balik, lalu bantuannya naik pelan-pelan kalau kamu masih buntu:
+    bertanya, menunjuk satu hal di soal, memecah soal jadi langkah kecil, lalu petunjuk yang lebih jelas. Kalau kamu sudah sampai di jawabannya sendiri, ia akan mengonfirmasi.
+  </div>
+
+  <div class="section" id="bank">Bank Soal Olimpiade</div>
   <div class="card note">
     Soal olimpiade di bawah diambil dari naskah babak penyisihan Chaanakya Ekadanta Olympiad
     tingkat nasional tahun 2024 dan 2025. Tiap paket berisi 25 soal. Kerjakan dulu, lalu tekan
@@ -26,7 +78,7 @@
   <div class="section">Matematika</div>
   <div class="grid" id="g-matematika"></div>
 
-  <div class="section">Bahasa Inggris</div>
+  <div class="section teal">Bahasa Inggris</div>
   <div class="grid" id="g-inggris"></div>
 
   <div class="section">Sains</div>
@@ -40,7 +92,7 @@
   </div>
   <div class="grid" id="g-ipas"></div>
 
-  <div class="section">Fisika SMA</div>
+  <div class="section amber">Fisika SMA</div>
   <div class="card note">
     Paket Fisika kelas 10 disusun dari ringkasan materi Besaran dan Pengukuran: besaran pokok dan
     turunan, satuan, dimensi, alat ukur panjang dan massa, ketidakpastian, serta angka penting.
@@ -53,6 +105,14 @@
     <a class="paket" href="eksponen-logaritma.html">
       <b>Eksponen &amp; Logaritma</b>
       <span>Matematika kelas 10 SMA · 20 soal + pembahasan</span>
+    </a>
+    <a class="paket" href="barisan-deret.html">
+      <b>Barisan &amp; Deret</b>
+      <span>Matematika kelas 10 SMA · 20 soal + guru bayangan</span>
+    </a>
+    <a class="paket" href="materikinar30sep.html">
+      <b>Bangun Ruang &amp; Lingkaran</b>
+      <span>Latihan PSTS 1 · 7 soal + guru bayangan</span>
     </a>
   </div>
 
@@ -80,6 +140,38 @@
       '<span>Tahun ' + p.tahun + ' · ' + p.soal.length + ' soal' + (gbr ? ' · ' + gbr + ' bergambar' : '') + '</span>';
     box.appendChild(a);
   });
+})();
+
+// Hiasan hero: kurva dan titik barisan yang bergerak pelan, seperti jendela grafis GeoGebra.
+(function () {
+  var cv = document.getElementById('deco'), ctx = cv.getContext('2d');
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function frame(t) {
+    var dpr = window.devicePixelRatio || 1, W = cv.clientWidth, H = cv.clientHeight;
+    if (cv.width !== W * dpr) { cv.width = W * dpr; cv.height = H * dpr; }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    var x0 = W * 0.55, s = t / 2600;
+    if (W < 700) { x0 = W * 0.2; ctx.globalAlpha = 0.35; } else ctx.globalAlpha = 1;
+    ctx.lineWidth = 2.5; ctx.strokeStyle = 'rgba(101,87,210,.55)'; ctx.beginPath();
+    for (var x = x0; x <= W; x += 3) {
+      var u = (x - x0) / 60;
+      var y = H * 0.55 - 60 * Math.sin(u * 0.9 + s) * Math.exp(-u * 0.08);
+      x === x0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    ctx.strokeStyle = 'rgba(15,157,154,.5)'; ctx.setLineDash([6, 5]); ctx.beginPath();
+    ctx.moveTo(x0, H * 0.25); ctx.lineTo(W, H * 0.25); ctx.stroke(); ctx.setLineDash([]);
+    for (var k = 0; k < 9; k++) {
+      var px = x0 + 40 + k * 56, sum = 0;
+      for (var j = 0; j <= k; j++) sum += Math.pow(0.5, j);
+      var py = H * 0.85 - (H * 0.6) * (sum / 2) * (0.96 + 0.04 * Math.sin(s * 2 + k));
+      ctx.beginPath(); ctx.arc(px, py, 6, 0, 7); ctx.fillStyle = '#6557d2'; ctx.fill();
+      ctx.lineWidth = 2; ctx.strokeStyle = '#fff'; ctx.stroke();
+    }
+    if (!still) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
 })();
 </script>
 </body>

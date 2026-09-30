@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rumah Pelajar – Barisan &amp; Deret (Kurikulum Merdeka)</title>
+<meta name="description" content="Materi barisan dan deret aritmetika-geometri kelas 10 Kurikulum Merdeka, penjelajah interaktif, 20 soal dengan guru bayangan, serta jawaban dan cara di akhir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><a class="brand" href="index.html">Rumah Pelajar</a><nav><a href="index.html">&larr; Daftar soal</a><a href="#materi">Materi</a><a href="#lab">Penjelajah</a><a href="#latihan">Latihan</a></nav></header>
+
+<section class="hero paper">
+  <div class="in">
+    <span class="eyebrow">Matematika · Kelas 10 · Fase E · Kurikulum Merdeka</span>
+    <h1>Barisan <em>&amp;</em> Deret</h1>
+    <p>Pelajari polanya, geser penggeser di penjelajah untuk melihat sukunya bergerak, lalu kerjakan 20 soal latihan. Guru bayangan siap menemanimu kalau buntu, dan jawaban beserta caranya ada di akhir halaman.</p>
+    <div class="chips"><span class="chip"><i></i>Aritmetika</span><span class="chip teal"><i></i>Geometri &amp; tak hingga</span><span class="chip amber"><i></i>Pertumbuhan, peluruhan, bunga</span></div>
+  </div>
+</section>
+
+<main class="wide materi">
+  <div class="card note">
+    <b>Tujuan pembelajaran.</b> Setelah belajar di halaman ini, kamu diharapkan bisa:
+    (1) mengenali barisan aritmetika dan geometri dari polanya; (2) menentukan suku ke-\(n\) dan jumlah \(n\) suku pertama;
+    (3) menghitung jumlah deret geometri tak hingga; (4) memakai barisan dan deret untuk masalah pertumbuhan, peluruhan, serta bunga tunggal dan majemuk.
+  </div>
+
+  <nav class="toc" id="materi" aria-label="Daftar isi materi">
+    <a href="#b1">1. Pola &amp; barisan</a><a href="#b2">2. Barisan aritmetika</a><a href="#b3">3. Deret aritmetika</a>
+    <a href="#b4">4. Barisan geometri</a><a href="#b5">5. Deret geometri</a><a href="#b6">6. Deret tak hingga</a><a href="#b7">7. Aplikasi</a>
+  </nav>
+
+  <section class="card bab" id="b1">
+    <span class="bab-no">BAGIAN 1</span>
+    <h2>Pola, barisan, dan deret</h2>
+    <p><b>Barisan</b> adalah bilangan-bilangan yang diurutkan menurut suatu aturan. Tiap bilangan disebut <b>suku</b>: \(U_1\) suku pertama, \(U_2\) suku kedua, dan seterusnya sampai \(U_n\) suku ke-\(n\).</p>
+    <p><b>Deret</b> adalah jumlah suku-suku barisan: \(S_n = U_1 + U_2 + \dots + U_n\).</p>
+    <div class="two">
+      <div class="rumus-box"><span class="lbl">Ditambah tetap → aritmetika</span>\(2,\ 5,\ 8,\ 11,\ \dots\) &nbsp; (selalu \(+3\))</div>
+      <div class="rumus-box"><span class="lbl">Dikali tetap → geometri</span>\(3,\ 6,\ 12,\ 24,\ \dots\) &nbsp; (selalu \(\times 2\))</div>
+    </div>
+    <div class="ingat">Hubungan penting: \(U_n = S_n - S_{n-1}\). Suku ke-\(n\) sama dengan jumlah \(n\) suku dikurangi jumlah \(n-1\) suku.</div>
+  </section>
+
+  <section class="card bab" id="b2">
+    <span class="bab-no">BAGIAN 2</span>
+    <h2>Barisan aritmetika</h2>
+    <p>Selisih dua suku yang berurutan selalu sama. Selisih ini disebut <b>beda</b>, \(b = U_n - U_{n-1}\).</p>
+    <div class="rumus-box"><span class="lbl">Suku ke-n</span>\[U_n = a + (n-1)\,b\]dengan \(a = U_1\) suku pertama dan \(b\) beda.</div>
+    <p>Kalau yang diketahui dua suku sembarang, misalnya \(U_k\) dan \(U_m\), bedanya \(b = \dfrac{U_m - U_k}{m-k}\).</p>
+    <div class="contoh"><span class="lbl">Contoh</span>
+      <p>Tentukan suku ke-10 barisan \(4, 9, 14, 19, \dots\)</p>
+      <ol><li>\(a = 4\), \(b = 9 - 4 = 5\).</li><li>\(U_{10} = 4 + 9\times 5 = 49\).</li></ol>
+    </div>
+    <h3>Sisipan</h3>
+    <p>Jika di antara dua suku yang berurutan (beda \(b\)) disisipkan \(k\) bilangan sehingga tetap aritmetika, beda barunya \(b' = \dfrac{b}{k+1}\).</p>
+  </section>
+
+  <section class="card bab" id="b3">
+    <span class="bab-no">BAGIAN 3</span>
+    <h2>Deret aritmetika</h2>
+    <p>Konon, Gauss kecil menjumlahkan \(1 + 2 + \dots + 100\) dengan memasangkan suku depan dan belakang: \(1+100,\ 2+99,\ \dots\) Setiap pasangan berjumlah 101, dan ada 50 pasang, jadi hasilnya \(50\times 101 = 5.050\). Cara ini yang melahirkan rumus berikut.</p>
+    <div class="rumus-box"><span class="lbl">Jumlah n suku pertama</span>\[S_n = \frac{n}{2}\,\bigl(2a + (n-1)\,b\bigr) = \frac{n}{2}\,(a + U_n)\]</div>
+    <div class="contoh"><span class="lbl">Contoh</span>
+      <p>Hitung \(3 + 7 + 11 + \dots\) sampai 15 suku.</p>
+      <ol><li>\(a = 3\), \(b = 4\), \(n = 15\).</li><li>\(S_{15} = \tfrac{15}{2}(2\cdot 3 + 14\cdot 4) = \tfrac{15}{2}\times 62 = 465\).</li></ol>
+    </div>
+  </section>
+
+  <section class="card bab" id="b4">
+    <span class="bab-no">BAGIAN 4</span>
+    <h2>Barisan geometri</h2>
+    <p>Perbandingan dua suku yang berurutan selalu sama. Perbandingan ini disebut <b>rasio</b>, \(r = \dfrac{U_n}{U_{n-1}}\).</p>
+    <div class="rumus-box"><span class="lbl">Suku ke-n</span>\[U_n = a\,r^{\,n-1}\]</div>
+    <div class="contoh"><span class="lbl">Contoh</span>
+      <p>Tentukan suku ke-6 barisan \(5, 10, 20, \dots\)</p>
+      <ol><li>\(a = 5\), \(r = \tfrac{10}{5} = 2\).</li><li>\(U_6 = 5\times 2^5 = 5\times 32 = 160\).</li></ol>
+    </div>
+    <div class="ingat">Kalau \(r\) di antara 0 dan 1, suku-sukunya makin kecil. Kalau \(r\) negatif, tandanya berganti-ganti: positif, negatif, positif, ...</div>
+  </section>
+
+  <section class="card bab" id="b5">
+    <span class="bab-no">BAGIAN 5</span>
+    <h2>Deret geometri</h2>
+    <div class="rumus-box"><span class="lbl">Jumlah n suku pertama</span>\[S_n = \frac{a\,(r^n - 1)}{r - 1}\ \ (r > 1) \qquad\qquad S_n = \frac{a\,(1 - r^n)}{1 - r}\ \ (r < 1)\]Kedua rumus sama saja; pilih yang membuat hitungan tidak negatif.</div>
+    <div class="contoh"><span class="lbl">Contoh</span>
+      <p>Hitung \(1 + 3 + 9 + \dots\) sampai 5 suku.</p>
+      <ol><li>\(a = 1\), \(r = 3\), \(n = 5\).</li><li>\(S_5 = \dfrac{1\,(3^5 - 1)}{3 - 1} = \dfrac{242}{2} = 121\).</li></ol>
+    </div>
+  </section>
+
+  <section class="card bab" id="b6">
+    <span class="bab-no">BAGIAN 6</span>
+    <h2>Deret geometri tak hingga</h2>
+    <p>Jika \(-1 < r < 1\), suku-sukunya makin mendekati nol, sehingga jumlahnya mendekati satu bilangan tertentu (deret <b>konvergen</b>). Jika \(r \le -1\) atau \(r \ge 1\), jumlahnya tidak menuju satu bilangan (deret <b>divergen</b>).</p>
+    <div class="rumus-box"><span class="lbl">Jumlah tak hingga (−1 &lt; r &lt; 1)</span>\[S_\infty = \frac{a}{1 - r}\]</div>
+    <div class="contoh"><span class="lbl">Contoh</span>
+      <p>\(8 + 4 + 2 + 1 + \dots = ?\)</p>
+      <ol><li>\(a = 8\), \(r = \tfrac12\).</li><li>\(S_\infty = \dfrac{8}{1 - \tfrac12} = 16\).</li></ol>
+    </div>
+    <div class="ingat">Soal bola memantul: bola dijatuhkan dari tinggi \(h\) dan memantul \(\tfrac{p}{q}\) kali tinggi sebelumnya. Selain turun pertama, setiap tinggi pantulan dilalui dua kali (naik lalu turun), jadi panjang lintasan \(= h + 2\times\) (jumlah tinggi pantulan).</div>
+  </section>
+
+  <section class="card bab" id="b7">
+    <span class="bab-no">BAGIAN 7</span>
+    <h2>Pertumbuhan, peluruhan, dan bunga</h2>
+    <p>Kalau suatu besaran berubah dengan <i>persentase</i> yang sama setiap periode, nilainya membentuk barisan geometri. Kalau berubah dengan <i>jumlah</i> yang sama, nilainya membentuk barisan aritmetika. \(M_0\) adalah nilai awal, \(i\) persentase per periode, dan \(n\) banyak periode.</p>
+    <div class="two">
+      <div class="rumus-box"><span class="lbl">Pertumbuhan</span>\(M_n = M_0\,(1 + i)^n\)</div>
+      <div class="rumus-box"><span class="lbl">Peluruhan</span>\(M_n = M_0\,(1 - i)^n\)</div>
+      <div class="rumus-box"><span class="lbl">Bunga tunggal (aritmetika)</span>\(M_n = M_0\,(1 + n\,i)\)</div>
+      <div class="rumus-box"><span class="lbl">Bunga majemuk (geometri)</span>\(M_n = M_0\,(1 + i)^n\)</div>
+    </div>
+    <div class="contoh"><span class="lbl">Contoh</span>
+      <p>Tabungan Rp1.000.000 dengan bunga majemuk 10% per tahun. Berapa tabungan setelah 3 tahun?</p>
+      <ol><li>\(M_3 = 1.000.000\times 1{,}1^3 = 1.000.000\times 1{,}331\).</li><li>\(M_3 = \text{Rp}1.331.000\). Dengan bunga tunggal hasilnya hanya \(1.000.000\times(1 + 3\times 0{,}1) = \text{Rp}1.300.000\).</li></ol>
+    </div>
+  </section>
+
+  <!-- ===== Penjelajah bergaya GeoGebra ===== -->
+  <div class="section teal" id="lab">Penjelajah Barisan</div>
+  <p class="note" style="margin-top:-6px">Geser penggeser di panel kiri dan lihat titik \((n, U_n)\) bergerak di bidang koordinat. Coba buat rasio di antara −1 dan 1, lalu perhatikan jumlahnya mendekati garis \(S_\infty\).</p>
+  <div class="ggb">
+    <div class="ggb-alg">
+      <div class="ggb-tabs"><button type="button" class="on" data-m="A">Aritmetika</button><button type="button" data-m="G">Geometri</button></div>
+      <div class="ggb-row"><div class="lab"><span>a = <b id="va"></b></span><span>suku pertama</span></div><input type="range" id="sa" min="-10" max="20" step="1" value="3"></div>
+      <div class="ggb-row" id="rowb"><div class="lab"><span>b = <b id="vb"></b></span><span>beda</span></div><input type="range" id="sb" min="-5" max="8" step="1" value="4"></div>
+      <div class="ggb-row" id="rowr" hidden><div class="lab"><span>r = <b id="vr"></b></span><span>rasio</span></div><input type="range" id="sr" min="-2" max="2.5" step="0.1" value="0.5"></div>
+      <div class="ggb-row"><div class="lab"><span>n = <b id="vn"></b></span><span>banyak suku</span></div><input type="range" id="sn" min="1" max="15" step="1" value="8"></div>
+      <div class="ggb-row" id="rumusnya" style="font-size:14px"></div>
+      <div class="ggb-list" id="list"></div>
+      <div class="ggb-sum" id="sum"></div>
+    </div>
+    <div class="ggb-g paper">
+      <div class="toggle"><label><input type="checkbox" id="showS" checked> tampilkan \(S_n\)</label></div>
+      <canvas id="cv" aria-label="Grafik suku-suku barisan"></canvas>
+    </div>
+  </div>
+
+  <!-- ===== Latihan ===== -->
+  <div class="section" id="latihan">Latihan Soal</div>
+  <div class="card ident">
+    <label for="nama"><b>Nama:</b></label>
+    <input id="nama" placeholder="Tulis namamu di sini">
+  </div>
+
+  <div id="quiz"></div>
+
+  <div class="card" id="result">
+    <div id="resName"></div>
+    <div class="score" id="resScore"></div>
+    <div id="resText"></div>
+  </div>
+
+  <div class="btns">
+    <button id="submit">Selesai &amp; Periksa Jawaban</button>
+    <button id="reset" class="sec">Ulangi</button>
+  </div>
+
+  <section class="kunci-wrap" id="kunci">
+    <div class="section amber">Jawaban &amp; Cara Penyelesaian</div>
+    <div class="card kunci-gate">
+      <p>Coba kerjakan semua soal dulu. Kalau sudah, buka jawaban dan cara penyelesaiannya di sini.</p>
+      <button id="kunci-btn" class="sec" type="button">Tampilkan Jawaban &amp; Cara</button>
+    </div>
+    <div class="kunci-list" id="kunci-list"></div>
+  </section>
+
+  <footer>Selamat belajar, Caca! Semoga sukses selalu menyertai perjalanan belajarmu. — Rumah Pelajar</footer>
+</main>
+
+<script>
+/* ---------- penjelajah barisan ---------- */
+(function () {
+  const $ = (id) => document.getElementById(id);
+  let mode = "A";
+  const cv = $("cv"), ctx = cv.getContext("2d");
+  const fmt = (x) => {
+    if (!isFinite(x)) return "∞";
+    const r = Math.round(x * 1000) / 1000;
+    return (Math.abs(r) >= 1e5 ? r.toExponential(2) : String(r)).replace("-", "−").replace(".", ",");
+  };
+  function nice(span) {
+    const raw = span / 6, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw / p;
+    return (m < 1.5 ? 1 : m < 3 ? 2 : m < 7 ? 5 : 10) * p;
+  }
+  function data() {
+    const a = +$("sa").value, b = +$("sb").value, r = +$("sr").value, n = +$("sn").value;
+    const U = [], S = [];
+    let s = 0;
+    for (let k = 1; k <= n; k++) {
+      const u = mode === "A" ? a + (k - 1) * b : a * Math.pow(r, k - 1);
+      s += u; U.push(u); S.push(s);
+    }
+    return { a, b, r, n, U, S };
+  }
+  function draw() {
+    const d = data(), showS = $("showS").checked;
+    $("va").textContent = fmt(d.a); $("vb").textContent = fmt(d.b); $("vr").textContent = fmt(d.r); $("vn").textContent = d.n;
+    $("rowb").hidden = mode !== "A"; $("rowr").hidden = mode !== "G";
+    const inf = mode === "G" && Math.abs(d.r) < 1 && d.r !== 0 ? d.a / (1 - d.r) : null;
+    $("rumusnya").innerHTML = mode === "A"
+      ? `U<sub>n</sub> = ${fmt(d.a)} + (n − 1)·${fmt(d.b)}`
+      : `U<sub>n</sub> = ${fmt(d.a)} · (${fmt(d.r)})<sup>n − 1</sup>`;
+    $("list").innerHTML = d.U.map((u, k) => `<div><span><i>U</i><sub>${k + 1}</sub></span><span>${fmt(u)}</span></div>`).join("");
+    $("sum").innerHTML = `S<sub>${d.n}</sub> = ${fmt(d.S[d.n - 1])}` + (mode === "G" ? (inf !== null ? ` &nbsp;·&nbsp; S<sub>∞</sub> = ${fmt(inf)}` : " &nbsp;·&nbsp; S<sub>∞</sub> tidak ada (|r| ≥ 1)") : "");
+
+    const dpr = window.devicePixelRatio || 1, W = cv.clientWidth, H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    const vals = [0, ...d.U, ...(showS ? d.S : []), ...(inf !== null && showS ? [inf] : [])];
+    let lo = Math.min(...vals), hi = Math.max(...vals);
+    if (hi - lo < 1e-9) { hi += 1; lo -= 1; }
+    const padV = (hi - lo) * 0.12; lo -= padV; hi += padV;
+    const L = 46, R = 18, T = 46, B = 30;
+    const X = (k) => L + (k / (d.n + 1)) * (W - L - R);
+    const Y = (v) => T + ((hi - v) / (hi - lo)) * (H - T - B);
+    // grid & sumbu
+    const step = nice(hi - lo);
+    ctx.font = "12px JetBrains Mono, monospace"; ctx.textAlign = "right"; ctx.textBaseline = "middle";
+    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+      ctx.strokeStyle = "rgba(101,87,210,.14)"; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(L, Y(v)); ctx.lineTo(W - R, Y(v)); ctx.stroke();
+      ctx.fillStyle = "#5f6275"; ctx.fillText(fmt(v), L - 6, Y(v));
+    }
+    ctx.textAlign = "center"; ctx.textBaseline = "top";
+    for (let k = 1; k <= d.n; k++) {
+      ctx.strokeStyle = "rgba(101,87,210,.08)"; ctx.beginPath(); ctx.moveTo(X(k), T); ctx.lineTo(X(k), H - B); ctx.stroke();
+      ctx.fillStyle = "#5f6275"; ctx.fillText(k, X(k), Math.min(H - B + 6, Y(0) + 6));
+    }
+    ctx.strokeStyle = "#1d1b2e"; ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.moveTo(L, Y(0)); ctx.lineTo(W - R, Y(0)); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(L, T - 10); ctx.lineTo(L, H - B); ctx.stroke();
+    ctx.fillStyle = "#1d1b2e"; ctx.textAlign = "left"; ctx.fillText("n", W - R - 8, Y(0) + 6);
+    // S tak hingga
+    if (inf !== null && showS) {
+      ctx.setLineDash([6, 5]); ctx.strokeStyle = "#0f9d9a"; ctx.lineWidth = 1.6;
+      ctx.beginPath(); ctx.moveTo(L, Y(inf)); ctx.lineTo(W - R, Y(inf)); ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle = "#0f9d9a"; ctx.font = "600 12px JetBrains Mono, monospace"; ctx.textBaseline = "bottom";
+      ctx.fillText("S∞ = " + fmt(inf), L + 6, Y(inf) - 3);
+    }
+    // S_n
+    if (showS) {
+      ctx.strokeStyle = "rgba(15,157,154,.55)"; ctx.lineWidth = 1.5; ctx.beginPath();
+      d.S.forEach((s, k) => (k ? ctx.lineTo(X(k + 1), Y(s)) : ctx.moveTo(X(k + 1), Y(s)))); ctx.stroke();
+      d.S.forEach((s, k) => { ctx.fillStyle = "#0f9d9a"; ctx.fillRect(X(k + 1) - 4.5, Y(s) - 4.5, 9, 9); });
+    }
+    // U_n
+    ctx.strokeStyle = "rgba(101,87,210,.5)"; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]); ctx.beginPath();
+    d.U.forEach((u, k) => (k ? ctx.lineTo(X(k + 1), Y(u)) : ctx.moveTo(X(k + 1), Y(u)))); ctx.stroke(); ctx.setLineDash([]);
+    d.U.forEach((u, k) => {
+      ctx.beginPath(); ctx.arc(X(k + 1), Y(u), 6, 0, 7); ctx.fillStyle = "#6557d2"; ctx.fill();
+      ctx.lineWidth = 2; ctx.strokeStyle = "#fff"; ctx.stroke();
+    });
+    // legenda
+    ctx.font = "600 12px Figtree, sans-serif"; ctx.textBaseline = "middle"; ctx.textAlign = "left";
+    ctx.beginPath(); ctx.arc(L + 10, 18, 6, 0, 7); ctx.fillStyle = "#6557d2"; ctx.fill();
+    ctx.fillStyle = "#1d1b2e"; ctx.fillText("suku Uₙ", L + 22, 18);
+    if (showS) { ctx.fillStyle = "#0f9d9a"; ctx.fillRect(L + 92, 13.5, 9, 9); ctx.fillStyle = "#1d1b2e"; ctx.fillText("jumlah Sₙ", L + 108, 18); }
+  }
+  document.querySelectorAll(".ggb-tabs button").forEach((b) => b.addEventListener("click", () => {
+    mode = b.dataset.m;
+    document.querySelectorAll(".ggb-tabs button").forEach((x) => x.classList.toggle("on", x === b));
+    draw();
+  }));
+  ["sa", "sb", "sr", "sn", "showS"].forEach((id) => $(id).addEventListener("input", draw));
+  new ResizeObserver(draw).observe(cv);
+  draw();
+})();
+
+/* ---------- soal ---------- */
+window.KUIS = {
+  topik: "Barisan dan deret aritmetika dan geometri, deret geometri tak hingga, pertumbuhan, peluruhan, bunga (Kurikulum Merdeka Fase E)",
+  jenjang: "SMA kelas 10",
+  bagian: [
+    { dari: 0, judul: "Bagian A · Barisan & Deret Aritmetika (Soal 1–7)" },
+    { dari: 7, judul: "Bagian B · Barisan & Deret Geometri (Soal 8–14)", warna: "teal" },
+    { dari: 14, judul: "Bagian C · Aplikasi & Pengayaan (Soal 15–20)", warna: "amber" },
+  ],
+  soal: [
+    { lvl: "Aritmetika · Mudah", q: "Suku ke-15 dari barisan aritmetika \\(3, 7, 11, 15, \\dots\\) adalah ....",
+      o: ["55", "59", "60", "63", "67"], a: 1,
+      langkah: ["Suku pertama \\(a = 3\\) dan beda \\(b = 7 - 3 = 4\\).", "\\(U_{15} = a + 14b = 3 + 14\\times 4\\).", "\\(U_{15} = 3 + 56 = 59\\)."],
+      jawab: "59", cek: [59], izin: [4, 14],
+      hint: ["Coba lihat selisih dua suku yang berurutan. Berapa bedanya, dan apakah selalu sama?",
+        "Suku ke-15 itu berjarak berapa langkah dari suku pertama? Tiap langkah bertambah berapa?",
+        "Pakai Un = a + (n − 1)b dengan a = 3, b = 4, n = 15. Berapa hasilmu?"] },
+
+    { lvl: "Aritmetika · Sedang", q: "Pada suatu barisan aritmetika diketahui \\(U_3 = 11\\) dan \\(U_8 = 26\\). Suku ke-20 barisan tersebut adalah ....",
+      o: ["59", "60", "62", "65", "68"], a: 2,
+      langkah: ["\\(U_8 - U_3 = (a + 7b) - (a + 2b) = 5b\\), sehingga \\(5b = 26 - 11 = 15\\) dan \\(b = 3\\).", "\\(U_3 = a + 2b = 11 \\Rightarrow a = 11 - 6 = 5\\).", "\\(U_{20} = a + 19b = 5 + 57 = 62\\)."],
+      jawab: "62", cek: [62], izin: [5, 15, 19],
+      hint: ["Dari suku ke-3 ke suku ke-8, ada berapa kali lompatan beda?",
+        "Selisih U8 dan U3 sama dengan 5 kali beda. Berapa bedanya? Setelah itu cari suku pertamanya.",
+        "Setelah b dan a ketemu, pakai U20 = a + 19b. Berapa hasilmu?"] },
+
+    { lvl: "Aritmetika · Sedang", q: "Banyak suku pada barisan \\(7, 12, 17, \\dots, 102\\) adalah ....",
+      o: ["18", "19", "20", "21", "22"], a: 2,
+      langkah: ["\\(a = 7\\), \\(b = 5\\), dan suku terakhir \\(U_n = 102\\).", "\\(102 = 7 + (n-1)\\times 5 \\Rightarrow 95 = 5(n-1) \\Rightarrow n - 1 = 19\\).", "\\(n = 20\\)."],
+      jawab: "20 suku", cek: [20], izin: [5, 95],
+      hint: ["Suku terakhirnya 102. Kalau kamu tahu beda barisan ini, bagaimana cara tahu 102 itu suku ke berapa?",
+        "Tulis 102 = a + (n − 1)b dengan a dan b dari barisan ini. Berapa nilai (n − 1)?",
+        "Dari 102 − 7 = 95, lalu 95 dibagi beda 5. Jangan lupa suku pertamanya ikut dihitung. Berapa banyak sukunya?"] },
+
+    { lvl: "Deret aritmetika · Mudah", q: "Jumlah 20 suku pertama deret \\(2 + 5 + 8 + \\dots\\) adalah ....",
+      o: ["590", "610", "620", "640", "650"], a: 1,
+      langkah: ["\\(a = 2\\), \\(b = 3\\), \\(n = 20\\).", "\\(S_{20} = \\tfrac{20}{2}\\bigl(2\\times 2 + 19\\times 3\\bigr) = 10\\,(4 + 57)\\).", "\\(S_{20} = 10\\times 61 = 610\\)."],
+      jawab: "610", cek: [610], izin: [3, 19],
+      hint: ["Deret ini aritmetika. Berapa suku pertama dan bedanya?",
+        "Rumus jumlah n suku pertama deret aritmetika memakai a, b, dan n. Masih ingat rumusnya?",
+        "Sn = n/2 × (2a + (n − 1)b) dengan a = 2, b = 3, n = 20. Berapa hasilmu?"] },
+
+    { lvl: "Deret aritmetika · Sedang", q: "Jumlah semua bilangan asli di antara 1 dan 100 yang habis dibagi 4 adalah ....",
+      o: ["1.100", "1.200", "1.248", "1.300", "1.324"], a: 1,
+      langkah: ["Bilangannya \\(4, 8, 12, \\dots, 96\\). Bilangan 100 tidak ikut karena soal meminta bilangan <i>di antara</i> 1 dan 100.", "\\(a = 4\\), \\(b = 4\\), \\(U_n = 96 = 4n \\Rightarrow n = 24\\).", "\\(S_{24} = \\tfrac{24}{2}(4 + 96) = 12\\times 100 = 1.200\\)."],
+      jawab: "1.200", cek: ["1200"], forbid: ["1200", "1.200"], izin: [8, 96, 24],
+      catatan: "Pilihan 1.300 adalah hasil jika 100 ikut dijumlahkan.",
+      hint: ["Tuliskan beberapa bilangan pertama yang habis dibagi 4. Apakah 100 ikut dihitung kalau soalnya bilang di antara 1 dan 100?",
+        "Bilangan-bilangan itu membentuk barisan aritmetika. Berapa suku terakhirnya, dan ada berapa sukunya?",
+        "Pakai Sn = n/2 × (a + Un) dengan suku pertama 4 dan suku terakhir 96. Berapa hasilmu?"] },
+
+    { lvl: "Deret aritmetika · Aplikasi", q: "Sebuah gedung pertunjukan memiliki 12 baris kursi. Baris paling depan berisi 15 kursi, dan setiap baris di belakangnya berisi 3 kursi lebih banyak dari baris di depannya. Banyak kursi seluruhnya adalah ....",
+      o: ["348", "363", "378", "393", "408"], a: 2,
+      langkah: ["Banyak kursi tiap baris membentuk barisan aritmetika dengan \\(a = 15\\), \\(b = 3\\), \\(n = 12\\).", "Baris ke-12: \\(U_{12} = 15 + 11\\times 3 = 48\\).", "\\(S_{12} = \\tfrac{12}{2}(15 + 48) = 6\\times 63 = 378\\) kursi."],
+      jawab: "378 kursi", cek: [378], izin: [11, 33, 48, 6],
+      hint: ["Banyak kursi tiap baris membentuk barisan apa? Berapa suku pertama dan bedanya?",
+        "Cari dulu banyak kursi di baris ke-12, lalu jumlahkan semua baris dengan rumus deret.",
+        "S12 = 12/2 × (15 + U12), dengan U12 = 15 + 11 × 3. Berapa totalnya?"] },
+
+    { lvl: "Deret aritmetika · Sulit", q: "Jumlah \\(n\\) suku pertama suatu deret dinyatakan dengan \\(S_n = n^2 + 4n\\). Suku ke-5 deret tersebut adalah ....",
+      o: ["9", "11", "13", "15", "45"], a: 2,
+      langkah: ["\\(S_5 = 5^2 + 4\\times 5 = 45\\).", "\\(S_4 = 4^2 + 4\\times 4 = 32\\).", "\\(U_5 = S_5 - S_4 = 45 - 32 = 13\\)."],
+      jawab: "13", cek: [13], izin: [5, 45, 32, 16, 25, 20],
+      catatan: "Pilihan 45 adalah \\(S_5\\), jumlah lima suku pertama, bukan suku ke-5.",
+      hint: ["S5 itu jumlah lima suku pertama, S4 jumlah empat suku pertama. Apa hubungan keduanya dengan U5?",
+        "Hitung S5 dan S4 dari rumusnya. Berapa masing-masing?",
+        "U5 = S5 − S4. Berapa selisihnya?"] },
+
+    { lvl: "Geometri · Mudah", q: "Suku ke-8 dari barisan geometri \\(3, 6, 12, 24, \\dots\\) adalah ....",
+      o: ["192", "256", "384", "512", "768"], a: 2,
+      langkah: ["\\(a = 3\\), rasio \\(r = \\tfrac63 = 2\\).", "\\(U_8 = a\\,r^7 = 3\\times 2^7 = 3\\times 128\\).", "\\(U_8 = 384\\)."],
+      jawab: "384", cek: [384], izin: [7, 128, 8],
+      hint: ["Bandingkan suku-suku yang berurutan. Kali ini bukan ditambah, tapi dikali berapa?",
+        "Suku ke-8 berarti suku pertama dikali rasio sebanyak berapa kali?",
+        "Un = a × r^(n − 1) dengan a = 3, r = 2, n = 8. Berapa 2 pangkat 7, lalu dikali 3?"] },
+
+    { lvl: "Geometri · Sedang", q: "Suatu barisan geometri dengan rasio positif memiliki \\(U_2 = 6\\) dan \\(U_5 = 162\\). Suku ke-6 barisan itu adalah ....",
+      o: ["243", "324", "486", "729", "1.458"], a: 2,
+      langkah: ["\\(\\dfrac{U_5}{U_2} = \\dfrac{a r^4}{a r} = r^3 = \\dfrac{162}{6} = 27\\), jadi \\(r = 3\\).", "\\(U_6 = U_5\\times r = 162\\times 3\\).", "\\(U_6 = 486\\)."],
+      jawab: "486", cek: [486], izin: [3, 27],
+      hint: ["Dari U2 ke U5, rasionya dikalikan berapa kali?",
+        "Bagi U5 dengan U2. Hasilnya sama dengan r pangkat berapa? Berapa r?",
+        "Setelah r ketemu, U6 = U5 × r. Berapa hasilmu?"] },
+
+    { lvl: "Deret geometri · Mudah", q: "Jumlah 6 suku pertama deret geometri \\(2 + 6 + 18 + \\dots\\) adalah ....",
+      o: ["364", "486", "728", "1.456", "2.186"], a: 2,
+      langkah: ["\\(a = 2\\), \\(r = 3\\), \\(n = 6\\).", "\\(S_6 = \\dfrac{2\\,(3^6 - 1)}{3 - 1} = \\dfrac{2\\,(729 - 1)}{2}\\).", "\\(S_6 = 728\\)."],
+      jawab: "728", cek: [728], izin: [3, 729],
+      hint: ["Berapa suku pertama dan rasio deret ini?",
+        "Karena rasionya lebih dari 1, pakai Sn = a(r^n − 1)/(r − 1). Berapa 3 pangkat 6?",
+        "S6 = 2 × (729 − 1)/(3 − 1). Berapa hasilmu?"] },
+
+    { lvl: "Geometri · Sedang", q: "Pada barisan geometri \\(64, 32, 16, \\dots\\), bilangan \\(\\tfrac14\\) merupakan suku ke- ....",
+      o: ["7", "8", "9", "10", "11"], a: 2,
+      langkah: ["\\(a = 64\\), \\(r = \\tfrac12\\).", "\\(64\\left(\\tfrac12\\right)^{n-1} = \\tfrac14 \\Rightarrow \\left(\\tfrac12\\right)^{n-1} = \\tfrac{1}{256} = \\left(\\tfrac12\\right)^{8}\\).", "\\(n - 1 = 8\\), jadi \\(n = 9\\)."],
+      jawab: "suku ke-9", cek: [9], izin: [256, 8],
+      hint: ["Berapa rasio barisan ini? Perhatikan, suku-sukunya makin kecil.",
+        "Tulis 64 × r^(n − 1) = 1/4. Kalau kedua ruas dibagi 64, (1/2) pangkat (n − 1) sama dengan berapa?",
+        "1/256 itu (1/2) pangkat berapa? Dari situ tentukan n − 1, lalu n."] },
+
+    { lvl: "Deret tak hingga · Mudah", q: "Jumlah deret geometri tak hingga \\(12 + 6 + 3 + \\dots\\) adalah ....",
+      o: ["18", "21", "24", "27", "36"], a: 2,
+      langkah: ["\\(a = 12\\), \\(r = \\tfrac{6}{12} = \\tfrac12\\). Karena \\(-1 < r < 1\\), deret ini konvergen.", "\\(S_\\infty = \\dfrac{a}{1 - r} = \\dfrac{12}{1 - \\tfrac12} = \\dfrac{12}{\\tfrac12}\\).", "\\(S_\\infty = 24\\)."],
+      jawab: "24", cek: [24],
+      hint: ["Berapa rasio deret ini? Apakah nilainya di antara −1 dan 1?",
+        "Kalau rasionya di antara −1 dan 1, jumlah tak hingganya punya rumus khusus. Masih ingat rumusnya?",
+        "S∞ = a/(1 − r) dengan a = 12 dan r = 1/2. Berapa hasilmu?"] },
+
+    { lvl: "Deret tak hingga · Aplikasi", q: "Sebuah bola dijatuhkan dari ketinggian 10 m. Setiap kali memantul, bola mencapai \\(\\tfrac34\\) tinggi sebelumnya. Panjang lintasan bola sampai berhenti adalah ....",
+      o: ["40 m", "60 m", "70 m", "80 m", "90 m"], a: 2,
+      langkah: ["Tinggi pantulan: \\(7{,}5 + 5{,}625 + \\dots\\), deret tak hingga dengan \\(a = 7{,}5\\) dan \\(r = \\tfrac34\\).", "Jumlah tinggi pantulan \\(=\\dfrac{7{,}5}{1 - \\tfrac34} = 30\\) m.", "Setiap tinggi pantulan dilalui dua kali (naik dan turun): \\(2\\times 30 = 60\\) m.", "Ditambah jatuh pertama 10 m: panjang lintasan \\(= 10 + 60 = 70\\) m."],
+      jawab: "70 m", cek: [70], izin: [7, 5, 625, 30],
+      catatan: "Pilihan 40 m adalah jumlah semua jarak turun saja, dan 80 m didapat kalau jatuh pertama juga dihitung dua kali.",
+      hint: ["Bayangkan lintasannya: bola turun, naik, turun lagi, dan seterusnya. Selain turun pertama kali, setiap tinggi pantulan dilalui berapa kali?",
+        "Tinggi pantulan membentuk deret geometri tak hingga 7,5 + 5,625 + .... Berapa jumlahnya?",
+        "Panjang lintasan = 10 + 2 × (jumlah tinggi pantulan), dengan jumlah tinggi pantulan = 7,5/(1 − 3/4). Berapa totalmu?"] },
+
+    { lvl: "Deret tak hingga · Sedang", q: "Jumlah suatu deret geometri tak hingga adalah 18 dan suku pertamanya 6. Rasio deret tersebut adalah ....",
+      o: ["\\(\\tfrac13\\)", "\\(\\tfrac12\\)", "\\(\\tfrac23\\)", "\\(\\tfrac34\\)", "\\(\\tfrac32\\)"], a: 2,
+      langkah: ["\\(S_\\infty = \\dfrac{a}{1 - r} \\Rightarrow 18 = \\dfrac{6}{1 - r}\\).", "\\(1 - r = \\dfrac{6}{18} = \\dfrac13\\).", "\\(r = 1 - \\tfrac13 = \\tfrac23\\)."],
+      jawab: "\\(\\tfrac23\\)", cek: ["2/3"], cekRe: /dua per tiga/i, forbid: ["2/3"], izin: [3],
+      hint: ["Tulis rumus jumlah tak hingga, lalu masukkan angka yang diketahui. Apa yang belum diketahui?",
+        "Dari 18 = 6/(1 − r), berapa nilai 1 − r?",
+        "Kalau 1 − r = 1/3, berapa r?"] },
+
+    { lvl: "Pertumbuhan", q: "Suatu bakteri membelah diri menjadi dua setiap 20 menit. Jika mula-mula ada 500 bakteri, banyak bakteri setelah 2 jam adalah ....",
+      o: ["3.000", "6.000", "16.000", "32.000", "64.000"], a: 3,
+      langkah: ["2 jam \\(= 120\\) menit, jadi bakteri membelah \\(120 : 20 = 6\\) kali.", "Setiap membelah, jumlahnya dikali 2: \\(M_6 = 500\\times 2^6 = 500\\times 64\\).", "\\(M_6 = 32.000\\) bakteri."],
+      jawab: "32.000 bakteri", cek: ["32000"], forbid: ["32000", "32.000"], izin: [120, 6, 64],
+      hint: ["Dalam 2 jam, bakteri itu membelah berapa kali?",
+        "Setiap kali membelah, jumlahnya dikali 2. Jadi setelah beberapa kali membelah, jumlahnya 500 dikali 2 pangkat berapa?",
+        "2 jam = 120 menit, berarti 6 kali membelah. Hitung 500 × 2 pangkat 6. Berapa hasilmu?"] },
+
+    { lvl: "Peluruhan", q: "Harga sebuah mobil baru Rp200.000.000. Setiap tahun harganya turun 10% dari harga tahun sebelumnya. Harga mobil setelah 3 tahun adalah ....",
+      o: ["Rp140.000.000", "Rp145.800.000", "Rp162.000.000", "Rp170.000.000", "Rp180.000.000"], a: 1,
+      langkah: ["Turun 10% berarti harga tahun berikutnya \\(90\\% = 0{,}9\\) kali harga tahun sebelumnya.", "\\(M_3 = 200.000.000\\times 0{,}9^3 = 200.000.000\\times 0{,}729\\).", "\\(M_3 = \\text{Rp}145.800.000\\)."],
+      jawab: "Rp145.800.000", cek: ["145800000", "145.8"], forbid: ["145.800.000", "145800000", "145,8"], izin: [90, 9, 729],
+      catatan: "Pilihan Rp140.000.000 adalah hasil kalau penurunan 10% selalu dihitung dari harga awal (seperti bunga tunggal).",
+      hint: ["Turun 10% berarti harga tahun berikutnya tinggal berapa persen dari harga tahun sebelumnya?",
+        "Setiap tahun harga dikali 0,9. Setelah 3 tahun, harga awal dikali 0,9 sebanyak berapa kali?",
+        "Hitung 200.000.000 × 0,9 × 0,9 × 0,9. Berapa hasilmu?"] },
+
+    { lvl: "Bunga majemuk", q: "Ibu menabung Rp5.000.000 di bank dengan bunga majemuk 6% per tahun. Besar tabungan Ibu setelah 2 tahun adalah ....",
+      o: ["Rp5.300.000", "Rp5.600.000", "Rp5.618.000", "Rp5.654.000", "Rp6.000.000"], a: 2,
+      langkah: ["\\(M_2 = M_0\\,(1 + i)^2 = 5.000.000\\times 1{,}06^2\\).", "\\(1{,}06^2 = 1{,}1236\\), sehingga \\(M_2 = 5.000.000\\times 1{,}1236\\).", "\\(M_2 = \\text{Rp}5.618.000\\). Cek per tahun: tahun ke-1 menjadi Rp5.300.000, tahun ke-2 bertambah 6% dari Rp5.300.000 \\(=\\) Rp318.000."],
+      jawab: "Rp5.618.000", cek: ["5618000"], forbid: ["5.618.000", "5618000"], izin: [106, 300],
+      catatan: "Pilihan Rp5.600.000 adalah hasil bunga tunggal (bunga selalu dihitung dari Rp5.000.000).",
+      hint: ["Pada bunga majemuk, bunga tahun kedua dihitung dari tabungan awal atau dari tabungan akhir tahun pertama?",
+        "Hitung dulu tabungan setelah 1 tahun, lalu tambahkan 6% dari jumlah itu untuk tahun kedua.",
+        "Mn = M0 × (1 + i) pangkat n, jadi 5.000.000 × 1,06 × 1,06. Berapa hasilmu?"] },
+
+    { lvl: "Bunga tunggal", q: "Pak Budi menyimpan uang Rp2.000.000 dengan bunga tunggal 5% per tahun. Besar simpanan setelah 4 tahun adalah ....",
+      o: ["Rp2.100.000", "Rp2.200.000", "Rp2.400.000", "Rp2.431.013", "Rp2.500.000"], a: 2,
+      langkah: ["Pada bunga tunggal, bunga setiap tahun selalu dihitung dari uang awal: \\(5\\%\\times 2.000.000 = 100.000\\) per tahun.", "Bunga 4 tahun \\(= 4\\times 100.000 = 400.000\\).", "Simpanan \\(= 2.000.000 + 400.000 = \\text{Rp}2.400.000\\). Dengan rumus: \\(M_4 = 2.000.000\\,(1 + 4\\times 0{,}05)\\)."],
+      jawab: "Rp2.400.000", cek: ["2400000"], forbid: ["2.400.000", "2400000"], izin: [100],
+      catatan: "Pilihan Rp2.431.013 adalah hasil kalau bunganya majemuk.",
+      hint: ["Pada bunga tunggal, bunga setiap tahun dihitung dari uang yang mana?",
+        "Berapa besar bunga dalam satu tahun? Lalu dalam 4 tahun?",
+        "Mn = M0 × (1 + n × i) = 2.000.000 × (1 + 4 × 0,05). Berapa hasilmu?"] },
+
+    { lvl: "Aritmetika · Sulit", q: "Tiga bilangan membentuk barisan aritmetika. Jumlah ketiga bilangan itu 21 dan hasil kalinya 231. Bilangan terbesar adalah ....",
+      o: ["9", "10", "11", "12", "13"], a: 2,
+      langkah: ["Misalkan bilangannya \\(p - b,\\ p,\\ p + b\\). Jumlahnya \\(3p = 21\\), jadi \\(p = 7\\).", "\\((7 - b)\\times 7\\times (7 + b) = 231 \\Rightarrow 49 - b^2 = 33 \\Rightarrow b^2 = 16\\), jadi \\(b = 4\\) (atau \\(-4\\)).", "Ketiga bilangan: \\(3, 7, 11\\). Bilangan terbesar 11."],
+      jawab: "11", cek: [11], izin: [3, 7, 49, 33, 16],
+      hint: ["Kalau tiga bilangan aritmetika ditulis sebagai (p − b), p, dan (p + b), apa yang terjadi ketika ketiganya dijumlahkan?",
+        "Dari jumlahnya kamu dapat bilangan tengah. Sekarang pakai hasil kalinya untuk mencari b.",
+        "(7 − b) × 7 × (7 + b) = 231, jadi 49 − b² = 33. Berapa b, dan berapa bilangan terbesarnya?"] },
+
+    { lvl: "Sisipan", q: "Di antara bilangan 2 dan 50 disisipkan 7 bilangan sehingga terbentuk barisan aritmetika. Beda barisan tersebut adalah ....",
+      o: ["4", "5", "6", "7", "8"], a: 2,
+      langkah: ["Setelah disisipi, barisan punya \\(2 + 7 = 9\\) suku: \\(U_1 = 2\\) dan \\(U_9 = 50\\).", "\\(U_9 = a + 8b \\Rightarrow 50 = 2 + 8b \\Rightarrow 8b = 48\\).", "\\(b = 6\\). Cara cepat: \\(b' = \\dfrac{50 - 2}{7 + 1} = 6\\)."],
+      jawab: "6", cek: [6], izin: [9, 8, 48],
+      hint: ["Setelah disisipkan 7 bilangan, barisannya punya berapa suku seluruhnya?",
+        "Suku pertamanya 2 dan suku terakhirnya 50. Suku terakhir itu suku ke berapa? Tulis dengan rumus Un.",
+        "50 = 2 + 8b. Berapa b?"] },
+  ],
+};
+</script>
+<script src="assets/fig.js"></script>
+<script src="assets/guru.js"></script>
+<script src="assets/kuis.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rumah Pelajar – Latihan PSTS 1: Bangun Ruang &amp; Lingkaran</title>
+<meta name="description" content="Latihan PSTS 1 (30 September): bangun ruang dan lingkaran, dengan gambar 3D yang bisa diputar, guru bayangan, serta jawaban dan cara di akhir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><a class="brand" href="index.html">Rumah Pelajar</a><nav><a href="index.html">&larr; Daftar soal</a><a href="barisan-deret.html">Barisan &amp; Deret</a></nav></header>
+
+<section class="hero paper">
+  <div class="in">
+    <span class="eyebrow">Materi 30 September · Latihan PSTS 1</span>
+    <h1>Bangun Ruang <em>&amp;</em> Lingkaran</h1>
+    <p>Tujuh soal pilihan ganda. Gambar bangun ruang bisa kamu putar dengan menyeretnya. Kalau buntu, tekan <b>Tanya Guru Bayangan</b>: ia tidak memberi jawaban, tapi menuntunmu dengan pertanyaan.</p>
+    <div class="chips"><span class="chip"><i></i>Prisma, balok, limas</span><span class="chip teal"><i></i>Juring &amp; tembereng</span><span class="chip amber"><i></i>Jawaban &amp; cara di akhir</span></div>
+  </div>
+</section>
+
+<main class="wide">
+  <div class="card">
+    <b class="eyebrow">Ringkasan rumus</b>
+    <div class="two" style="margin-top:10px">
+      <table class="rumus">
+        <tr><td>Volume prisma \(=\) luas alas \(\times\) tinggi</td></tr>
+        <tr><td>Volume balok \(= p\times l\times t\)</td></tr>
+        <tr><td>Luas trapesium \(=\dfrac{(a+b)}{2}\times t\)</td></tr>
+        <tr><td>Luas permukaan limas \(=\) luas alas \(+\) jumlah luas sisi tegak</td></tr>
+      </table>
+      <table class="rumus">
+        <tr><td>Luas juring \(=\dfrac{\alpha}{360^\circ}\times\pi r^2\)</td></tr>
+        <tr><td>Panjang busur \(=\dfrac{\alpha}{360^\circ}\times 2\pi r\)</td></tr>
+        <tr><td>Luas tembereng \(=\) luas juring \(-\) luas segitiga</td></tr>
+        <tr><td>\(\pi=\dfrac{22}{7}\) (jari-jari kelipatan 7) atau \(\pi = 3{,}14\)</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card ident">
+    <label for="nama"><b>Nama:</b></label>
+    <input id="nama" placeholder="Tulis namamu di sini">
+  </div>
+
+  <div id="quiz"></div>
+
+  <div class="card" id="result">
+    <div id="resName"></div>
+    <div class="score" id="resScore"></div>
+    <div id="resText"></div>
+  </div>
+
+  <div class="btns">
+    <button id="submit">Selesai &amp; Periksa Jawaban</button>
+    <button id="reset" class="sec">Ulangi</button>
+  </div>
+
+  <section class="kunci-wrap" id="kunci">
+    <div class="section amber">Jawaban &amp; Cara Penyelesaian</div>
+    <div class="card kunci-gate">
+      <p>Coba kerjakan semua soal dulu. Kalau sudah, buka jawaban dan cara penyelesaiannya di sini.</p>
+      <button id="kunci-btn" class="sec" type="button">Tampilkan Jawaban &amp; Cara</button>
+    </div>
+    <div class="kunci-list" id="kunci-list"></div>
+  </section>
+
+  <footer>Selamat belajar! Semoga sukses selalu menyertai perjalanan belajarmu. — Rumah Pelajar</footer>
+</main>
+
+<script>
+const HATCH = `<defs><pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="#e3f6ea"/><line x1="0" y1="0" x2="0" y2="7" stroke="#1d9c5a" stroke-width="1.6"/></pattern></defs>`;
+const lbl = (x, y, t, s) => `<text x="${x}" y="${y}" text-anchor="middle" font-size="${s || 17}" font-weight="700" fill="#1d1b2e" stroke="#fff" stroke-width="4" paint-order="stroke">${t}</text>`;
+const dot = (x, y) => `<circle cx="${x}" cy="${y}" r="4.5" fill="#6557d2" stroke="#fff" stroke-width="1.5"/>`;
+
+window.KUIS = {
+  topik: "Bangun ruang (prisma, balok, limas) dan lingkaran (juring, tembereng)",
+  jenjang: "SMP",
+  bagian: [
+    { dari: 0, judul: "Bagian A · Bangun Ruang (Soal 1–4)" },
+    { dari: 4, judul: "Bagian B · Lingkaran (Soal 5–7)", warna: "teal" },
+  ],
+  soal: [
+    { lvl: "Prisma trapesium",
+      q: "Perhatikan gambar berikut! Suatu kolam renang mempunyai ukuran panjang 10 m dan lebar 8 m. Kedalaman air pada ujung yang dangkal 1 m dan terus melandai sampai 12 m pada ujung yang paling dalam. Volume kolam renang tersebut adalah ....",
+      o: ["420 m³", "520 m³", "580 m³", "680 m³"], a: 1,
+      fig: { type: "3d", alt: "Kolam renang berbentuk prisma trapesium", yaw: -0.5, pitch: 0.38,
+        solids: [{ v: { P: [0, 0, 0], Q: [10, 0, 0], R: [10, 8, 0], S: [0, 8, 0], P2: [0, 0, -12], S2: [0, 8, -12], Q2: [10, 0, -1], R2: [10, 8, -1] },
+          f: [["P", "Q", "R", "S"], ["P", "Q", "Q2", "P2"], ["S", "R", "R2", "S2"], ["P", "S", "S2", "P2"], ["Q", "R", "R2", "Q2"], ["P2", "Q2", "R2", "S2"]],
+          fill: "#1fa7b8", alpha: 0.26 }],
+        dims: [{ a: "P", b: "Q", t: "10 m" }, { a: "Q", b: "R", t: "8 m" }, { a: "P", b: "P2", t: "12 m" }, { a: "Q", b: "Q2", t: "1 m" }] },
+      langkah: [
+        "Kolam berbentuk prisma. Alasnya adalah sisi samping kolam yang berbentuk trapesium: sisi sejajarnya 1 m dan 12 m, tingginya sama dengan panjang kolam, 10 m.",
+        "Luas trapesium \\(=\\dfrac{(1+12)}{2}\\times 10 = 6{,}5\\times 10 = 65\\ \\text{m}^2\\).",
+        "Tinggi prisma adalah lebar kolam, yaitu 8 m.",
+        "Volume \\(=\\) luas alas \\(\\times\\) tinggi \\(= 65\\times 8 = 520\\ \\text{m}^3\\).",
+      ],
+      jawab: "520 m³",
+      catatan: "Di naskah asli, satuan pada pilihan tertulis m2, dan kalimat soalnya tertulis \"kedalaman udara\". Volume memakai satuan kubik (m³), dan yang dimaksud adalah kedalaman air.",
+      cek: ["520"],
+      hint: [
+        "Lihat gambarnya dari samping. Sisi samping kolam yang miring dasarnya itu berbentuk bangun datar apa?",
+        "Kolam ini sebuah prisma. Langkah pertama: berapa luas sisi samping yang berbentuk trapesium itu? Sisi sejajarnya yang mana saja?",
+        "Volume prisma = luas alas × tinggi. Alasnya trapesium dengan sisi sejajar 1 m dan 12 m serta tinggi 10 m, lalu dikali lebar 8 m. Berapa hasilmu?",
+      ] },
+
+    { lvl: "Gabungan balok + prisma",
+      q: "Perhatikan gambar tenda berikut! Lebar tenda 3 m, panjang 6 m, tinggi dinding tegak 0,5 m, dan tinggi puncak tenda dari tanah 2 m. Volume tenda tersebut adalah ....",
+      o: ["23,5 m³", "20,5 m³", "21,5 m³", "22,5 m³"], a: 3,
+      fig: { type: "3d", alt: "Tenda: balok di bawah dan prisma segitiga di atas", yaw: -0.75, pitch: 0.32,
+        solids: [{ v: { A: [0, 0, 0], B: [3, 0, 0], C: [3, 0, 0.5], T: [1.5, 0, 2], E: [0, 0, 0.5], A2: [0, 6, 0], B2: [3, 6, 0], C2: [3, 6, 0.5], T2: [1.5, 6, 2], E2: [0, 6, 0.5] },
+          f: [["A", "B", "C", "T", "E"], ["A2", "B2", "C2", "T2", "E2"], ["A", "B", "B2", "A2"], ["B", "B2", "C2", "C"], ["A", "A2", "E2", "E"], ["C", "C2", "T2", "T"], ["E", "T", "T2", "E2"]],
+          fill: "#e8930c", alpha: 0.24 }],
+        pts: { M: [1.5, 0, 0] },
+        segs: [{ a: "M", b: "T", dash: true }],
+        dims: [{ a: "A", b: "B", t: "3 m" }, { a: "B", b: "B2", t: "6 m" }, { a: "B2", b: "C2", t: "0,5 m" }, { a: "M", b: "T", t: "2 m", push: 22 }] },
+      langkah: [
+        "Tenda terdiri dari dua bangun: balok di bawah (tinggi 0,5 m) dan prisma segitiga di atas (atap).",
+        "Volume balok \\(= 3\\times 6\\times 0{,}5 = 9\\ \\text{m}^3\\).",
+        "Tinggi segitiga atap \\(= 2 - 0{,}5 = 1{,}5\\) m, sehingga luas segitiga \\(=\\tfrac12\\times 3\\times 1{,}5 = 2{,}25\\ \\text{m}^2\\).",
+        "Volume prisma atap \\(= 2{,}25\\times 6 = 13{,}5\\ \\text{m}^3\\).",
+        "Volume tenda \\(= 9 + 13{,}5 = 22{,}5\\ \\text{m}^3\\).",
+      ],
+      jawab: "22,5 m³",
+      catatan: "Di naskah asli, satuan pada pilihan tertulis cm² dan cm³. Ukuran tenda dalam meter, jadi satuan volumenya m³.",
+      cek: ["22.5"], forbid: ["22,5", "22.5"],
+      hint: [
+        "Tenda ini bisa dipecah menjadi dua bangun ruang. Bagian bawah yang dindingnya tegak itu bangun apa, dan bagian atapnya bangun apa?",
+        "Hitung satu per satu. Pertama volume bagian bawah. Lalu untuk atap: berapa tinggi segitiga atapnya kalau tinggi puncak 2 m dan dinding 0,5 m?",
+        "Volume balok = p × l × t, volume atap = luas segitiga × panjang tenda. Jumlahkan keduanya. Berapa totalmu?",
+      ] },
+
+    { lvl: "Volume balok & kubus",
+      q: "Budi akan memasukkan buku-buku yang berukuran sama ke dalam sebuah kotak. Ukuran satu buku 20 cm × 15 cm × 6 cm, sedangkan kotaknya berbentuk kubus dengan rusuk 50 cm. Jumlah buku maksimum yang dapat dimasukkan Budi ke dalam kotak adalah ....",
+      o: ["69", "71", "70", "68"], a: 0,
+      fig: { type: "3d", alt: "Kotak kubus 50 cm dengan satu buku di dalamnya", yaw: -0.55, pitch: 0.4,
+        solids: [
+          { v: { K1: [0, 0, 0], K2: [50, 0, 0], K3: [50, 50, 0], K4: [0, 50, 0], K5: [0, 0, 50], K6: [50, 0, 50], K7: [50, 50, 50], K8: [0, 50, 50] },
+            f: [["K1", "K2", "K3", "K4"], ["K5", "K6", "K7", "K8"], ["K1", "K2", "K6", "K5"], ["K2", "K3", "K7", "K6"], ["K3", "K4", "K8", "K7"], ["K4", "K1", "K5", "K8"]],
+            fill: "#b98a4a", alpha: 0.1 },
+          { v: { B1: [0, 0, 0], B2: [20, 0, 0], B3: [20, 15, 0], B4: [0, 15, 0], B5: [0, 0, 6], B6: [20, 0, 6], B7: [20, 15, 6], B8: [0, 15, 6] },
+            f: [["B1", "B2", "B3", "B4"], ["B5", "B6", "B7", "B8"], ["B1", "B2", "B6", "B5"], ["B2", "B3", "B7", "B6"], ["B3", "B4", "B8", "B7"], ["B4", "B1", "B5", "B8"]],
+            fill: "#6557d2", alpha: 0.55, stroke: "#4a3db2" }],
+        dims: [{ a: "K5", b: "K6", t: "50 cm" }, { a: "K2", b: "K3", t: "50 cm" }, { a: "K3", b: "K7", t: "50 cm" },
+          { a: "B1", b: "B2", t: "20 cm", color: "#4a3db2" }, { a: "B6", b: "B7", t: "15 cm", color: "#4a3db2", push: 18 }, { a: "B1", b: "B5", t: "6 cm", color: "#4a3db2" }] },
+      langkah: [
+        "Volume kotak \\(= 50\\times 50\\times 50 = 125.000\\ \\text{cm}^3\\).",
+        "Volume satu buku \\(= 20\\times 15\\times 6 = 1.800\\ \\text{cm}^3\\).",
+        "Banyak buku \\(= 125.000 : 1.800 \\approx 69{,}4\\).",
+        "Buku tidak bisa dipotong, jadi hasilnya dibulatkan ke bawah: 69 buku.",
+      ],
+      jawab: "69",
+      catatan: "Kunci 69 memakai cara perbandingan volume, cara yang dimaksud soal. Kalau buku benar-benar disusun di dalam kotak, akan ada celah di pinggir yang tidak bisa diisi buku utuh, jadi jumlah nyatanya lebih sedikit. Misalnya, kalau semua buku disusun searah, yang muat hanya 2 × 3 × 8 = 48 buku.",
+      cek: ["69"], izin: [125, 1800, 0],
+      hint: [
+        "Coba bandingkan besar ruang di dalam kotak dengan besar ruang yang dipakai satu buku. Besaran apa yang cocok untuk membandingkannya?",
+        "Hitung dulu volume kotak kubus, lalu volume satu buku. Berapa volume masing-masing?",
+        "Bagi volume kotak dengan volume satu buku. Hasilnya bukan bilangan bulat. Dibulatkan ke atas atau ke bawah, dan kenapa?",
+      ] },
+
+    { lvl: "Luas permukaan limas",
+      q: "Perhatikan gambar berikut! Alas limas T.ABCD berbentuk persegi panjang dengan AB = 18 cm dan BC = 10 cm. Jika tinggi limas (OT) adalah 12 cm, luas seluruh permukaan limas T.ABCD adalah ....",
+      o: ["464 cm²", "564 cm²", "574 cm²", "584 cm²"], a: 1,
+      fig: { type: "3d", alt: "Limas T.ABCD dengan tinggi OT", yaw: -0.35, pitch: 0.3,
+        solids: [{ v: { A: [0, 0, 0], B: [18, 0, 0], C: [18, 10, 0], D: [0, 10, 0], T: [9, 5, 12] },
+          f: [["A", "B", "C", "D"], ["A", "B", "T"], ["B", "C", "T"], ["C", "D", "T"], ["D", "A", "T"]], fill: "#6557d2", alpha: 0.16 }],
+        pts: { O: [9, 5, 0] },
+        segs: [{ a: "A", b: "C", dash: true, color: "#8d89a6", w: 1.2 }, { a: "B", b: "D", dash: true, color: "#8d89a6", w: 1.2 }, { a: "O", b: "T", dash: true }],
+        names: ["A", "B", "C", "D", "T", "O"],
+        dims: [{ a: "A", b: "B", t: "18 cm", push: 20 }, { a: "B", b: "C", t: "10 cm", push: 22 }, { a: "O", b: "T", t: "12 cm", push: 26 }] },
+      langkah: [
+        "Luas alas \\(= 18\\times 10 = 180\\ \\text{cm}^2\\).",
+        "Sisi tegak di atas rusuk 18 cm: jarak O ke rusuk itu \\(=\\tfrac{10}{2}=5\\) cm, sehingga tinggi segitiganya \\(=\\sqrt{12^2+5^2}=\\sqrt{169}=13\\) cm.",
+        "Sisi tegak di atas rusuk 10 cm: jarak O ke rusuk itu \\(=\\tfrac{18}{2}=9\\) cm, sehingga tinggi segitiganya \\(=\\sqrt{12^2+9^2}=\\sqrt{225}=15\\) cm.",
+        "Luas keempat sisi tegak \\(= 2\\times\\tfrac12\\times 18\\times 13 + 2\\times\\tfrac12\\times 10\\times 15 = 234 + 150 = 384\\ \\text{cm}^2\\).",
+        "Luas permukaan \\(= 180 + 384 = 564\\ \\text{cm}^2\\).",
+      ],
+      jawab: "564 cm²",
+      cek: ["564"], izin: [5, 9, 13, 15],
+      hint: [
+        "Permukaan limas terdiri dari alas dan beberapa sisi tegak. Ada berapa sisi tegak, dan apakah semuanya sama besar?",
+        "Sisi tegaknya segitiga, jadi kamu butuh tinggi segitiga, bukan tinggi limas. Pakai Pythagoras dengan tinggi limas 12 cm dan setengah lebar alas. Berapa tinggi sisi tegak di atas rusuk 18 cm?",
+        "Ada dua pasang sisi tegak: alas 18 cm dengan tinggi dari Pythagoras 12 dan 5, serta alas 10 cm dengan tinggi dari Pythagoras 12 dan 9. Jumlahkan luas alas dan keempat segitiga. Berapa hasilmu?",
+      ] },
+
+    { lvl: "Luas tembereng",
+      q: "Luas daerah yang diarsir merah pada gambar berikut adalah .... (O pusat lingkaran, OA = 21 cm, sudut AOB siku-siku, gunakan \\(\\pi=\\tfrac{22}{7}\\))",
+      o: ["154 cm²", "128 cm²", "132 cm²", "126 cm²"], a: 3,
+      fig: { type: "2d", vb: "0 0 400 340", alt: "Tembereng AB pada lingkaran berpusat O",
+        svg: `<circle cx="230" cy="160" r="140" fill="#fff" fill-opacity=".6" stroke="#1d1b2e" stroke-width="2.5"/>
+          <path d="M90,160 A140,140 0 0 0 230,300 Z" fill="#e5484d" fill-opacity=".85" stroke="#b4232a" stroke-width="1.5"/>
+          <line x1="90" y1="160" x2="230" y2="160" stroke="#2b2a6e" stroke-width="2.5"/><line x1="230" y1="160" x2="230" y2="300" stroke="#2b2a6e" stroke-width="2.5"/>
+          <path d="M212,160 V178 H230" fill="#e3f6ea" fill-opacity=".8" stroke="#1d9c5a" stroke-width="2"/>
+          ${dot(90, 160)}${dot(230, 160)}${dot(230, 300)}
+          ${lbl(72, 166, "A", 20)}${lbl(250, 154, "O", 20)}${lbl(232, 326, "B", 20)}${lbl(160, 148, "21 cm")}` },
+      langkah: [
+        "Daerah merah adalah tembereng: luas juring AOB dikurangi luas segitiga AOB.",
+        "Luas juring AOB \\(=\\dfrac{90^\\circ}{360^\\circ}\\times\\dfrac{22}{7}\\times 21\\times 21=\\tfrac14\\times 1.386 = 346{,}5\\ \\text{cm}^2\\).",
+        "Luas segitiga AOB \\(=\\tfrac12\\times 21\\times 21 = 220{,}5\\ \\text{cm}^2\\).",
+        "Luas tembereng \\(= 346{,}5 - 220{,}5 = 126\\ \\text{cm}^2\\).",
+      ],
+      jawab: "126 cm²",
+      cek: ["126"], izin: [90, 360, 4],
+      hint: [
+        "Daerah merah itu dibatasi busur AB dan garis lurus AB. Menurutmu daerah itu bisa didapat dari bangun apa dikurangi bangun apa?",
+        "Pecah jadi dua: hitung dulu luas juring AOB (seperempat lingkaran), lalu luas segitiga siku-siku AOB. Berapa luas juringnya?",
+        "Luas tembereng = luas juring − luas segitiga. Juring = 90/360 × 22/7 × 21 × 21, segitiga = 1/2 × 21 × 21. Berapa selisihnya?",
+      ] },
+
+    { lvl: "Perbandingan juring",
+      q: "Perhatikan gambar! Jika BD diameter dan luas juring BOC = 50 cm², luas juring AOD adalah ....",
+      o: ["20 cm²", "25 cm²", "30 cm²", "40 cm²"], a: 0,
+      fig: { type: "2d", vb: "0 0 400 380", alt: "Lingkaran dengan juring AOD 40 derajat dan juring BOC 100 derajat",
+        svg: `${HATCH}<circle cx="200" cy="190" r="140" fill="#fff" fill-opacity=".6" stroke="#2b2a6e" stroke-width="2.5"/>
+          <path d="M200,190 L338.6,170.5 A140,140 0 0 0 293.7,86 Z" fill="url(#hatch)" stroke="#1d9c5a" stroke-width="1.5"/>
+          <path d="M200,190 L113.8,79.7 A140,140 0 0 0 106.3,294 Z" fill="url(#hatch)" stroke="#1d9c5a" stroke-width="1.5"/>
+          <line x1="106.3" y1="294" x2="293.7" y2="86" stroke="#b4232a" stroke-width="2"/>
+          <line x1="200" y1="190" x2="338.6" y2="170.5" stroke="#b4232a" stroke-width="2"/><line x1="200" y1="190" x2="113.8" y2="79.7" stroke="#b4232a" stroke-width="2"/>
+          <path d="M227.7,186.1 A28,28 0 0 0 218.7,169.2" fill="none" stroke="#e5484d" stroke-width="2"/>
+          <path d="M179.1,163.2 A34,34 0 0 0 177.2,215.3" fill="none" stroke="#e5484d" stroke-width="2"/>
+          ${dot(338.6, 170.5)}${dot(293.7, 86)}${dot(113.8, 79.7)}${dot(106.3, 294)}${dot(200, 190)}
+          ${lbl(356, 172, "A", 20)}${lbl(300, 72, "D", 20)}${lbl(100, 72, "C", 20)}${lbl(98, 318, "B", 20)}${lbl(214, 212, "O", 20)}
+          ${lbl(250, 166, "40°", 15)}${lbl(142, 196, "100°", 15)}` },
+      langkah: [
+        "Kedua juring berada pada lingkaran yang sama, jadi luas juring sebanding dengan besar sudut pusatnya.",
+        "\\(\\dfrac{L_{AOD}}{L_{BOC}}=\\dfrac{\\angle AOD}{\\angle BOC}=\\dfrac{40^\\circ}{100^\\circ}\\).",
+        "\\(L_{AOD}=\\dfrac{40}{100}\\times 50 = 20\\ \\text{cm}^2\\).",
+      ],
+      jawab: "20 cm²",
+      catatan: "Keterangan \"BD diameter\" tidak diperlukan untuk menjawab soal ini.",
+      cek: ["20"], izin: [40, 100],
+      hint: [
+        "Kedua juring ada di lingkaran yang sama. Apa yang membedakan juring AOD dan juring BOC?",
+        "Luas juring bergantung pada besar sudut pusatnya. Sudut AOD 40°, sudut BOC 100°. Juring AOD itu berapa bagian dari juring BOC?",
+        "Pakai perbandingan: luas AOD : luas BOC = 40 : 100. Kalau luas BOC 50 cm², berapa luas AOD?",
+      ] },
+
+    { lvl: "Juring, busur, keliling", multi: true,
+      q: "Ani membeli sebuah pizza besar berbentuk lingkaran dengan jari-jari 20 cm. Pizza tersebut dipotong menjadi beberapa bagian berbentuk juring dengan sudut pusat masing-masing 45°. Manakah pernyataan berikut yang sesuai dengan informasi di atas? (gunakan \\(\\pi=3{,}14\\))",
+      o: ["Pizza tersebut terbagi menjadi 8 potongan yang sama besar.", "Luas permukaan satu potong pizza adalah 157 cm².", "Panjang busur luar satu potong pizza adalah 15,7 cm.", "Keliling satu potong pizza (termasuk dua sisi bekas potongan pisau) adalah 55,7 cm."],
+      a: [0, 1, 2, 3],
+      fig: { type: "2d", vb: "0 0 400 360", alt: "Pizza dipotong delapan, satu potong disorot",
+        svg: `<circle cx="200" cy="180" r="146" fill="#e9b35f"/><circle cx="200" cy="180" r="136" fill="#f7d98f"/>
+          ${[0, 45, 90, 135, 180, 225, 270, 315].map((d) => { const r = d * Math.PI / 180; return `<line x1="200" y1="180" x2="${(200 + 146 * Math.cos(r)).toFixed(1)}" y2="${(180 - 146 * Math.sin(r)).toFixed(1)}" stroke="#b9772a" stroke-width="2"/>`; }).join("")}
+          ${[[250, 120], [140, 110], [120, 210], [190, 270], [270, 230], [300, 160], [210, 70], [90, 160], [160, 180], [240, 190]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="10" fill="#c4452f" opacity=".75"/>`).join("")}
+          <path d="M200,180 L346,180 A146,146 0 0 0 303.2,76.8 Z" fill="#6557d2" fill-opacity=".35" stroke="#4a3db2" stroke-width="2.5"/>
+          <path d="M232,180 A32,32 0 0 0 222.6,157.4" fill="none" stroke="#4a3db2" stroke-width="2"/>
+          ${lbl(248, 168, "45°", 15)}${lbl(275, 200, "r = 20 cm", 15)}${dot(200, 180)}` },
+      langkah: [
+        "Banyak potongan \\(= 360^\\circ : 45^\\circ = 8\\). Pernyataan A sesuai.",
+        "Luas satu potong \\(=\\dfrac{45}{360}\\times 3{,}14\\times 20^2=\\tfrac18\\times 1.256 = 157\\ \\text{cm}^2\\). Pernyataan B sesuai.",
+        "Panjang busur \\(=\\dfrac{45}{360}\\times 2\\times 3{,}14\\times 20=\\tfrac18\\times 125{,}6 = 15{,}7\\) cm. Pernyataan C sesuai.",
+        "Keliling satu potong \\(=\\) busur \\(+\\) dua jari-jari \\(= 15{,}7 + 20 + 20 = 55{,}7\\) cm. Pernyataan D sesuai.",
+        "Jadi keempat pernyataan sesuai.",
+      ],
+      jawab: "semua pernyataan sesuai",
+      cekRe: /(semua|keempat|empat[^.]{0,15}(benar|sesuai|cocok)|a\s*,?\s*b\s*,?\s*c\s*,?\s*(dan\s*)?d\b)/i, forbid: [], izin: [360, 8, 3, 14],
+      hint: [
+        "Kita cek satu per satu. Mulai dari pernyataan pertama: kalau satu potong bersudut 45°, berapa potong yang dibutuhkan untuk satu putaran penuh?",
+        "Untuk pernyataan kedua dan ketiga: satu potong itu berapa bagian dari seluruh pizza? Lalu berapa luas dan keliling seluruh lingkarannya?",
+        "Luas satu potong = 1/8 × π × r², busur = 1/8 × 2 × π × r, dan keliling potongan = busur + 2 jari-jari. Pernyataan mana saja yang cocok dengan hitunganmu?",
+      ] },
+  ],
+};
+</script>
+<script src="assets/fig.js"></script>
+<script src="assets/guru.js"></script>
+<script src="assets/kuis.js"></script>
+</body>
+</html>
